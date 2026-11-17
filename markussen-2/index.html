@@ -121,13 +121,13 @@ header.vast .hamburger{background:var(--ijs)}
 header.vast .hamburger span,body.menu-open .hamburger span{background:var(--nacht)}
 
 /* Hero */
-.hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;align-items:center;background:#0E2233 url('https://www.markussen.be/wp-content/uploads/2018/01/11049_208_Avoriaz_de_nuit.jpg') center/cover no-repeat;color:#fff;overflow:hidden;padding:140px 0 110px}
+.hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;align-items:flex-start;background:#0E2233 url('https://www.markussen.be/wp-content/uploads/2018/01/11049_208_Avoriaz_de_nuit.jpg') center/cover no-repeat;color:#fff;overflow:hidden;padding:150px 0 max(240px,29vw)}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,24,37,.9) 0%,rgba(10,24,37,.62) 50%,rgba(10,24,37,.3) 100%),linear-gradient(0deg,rgba(10,24,37,.75) 0%,rgba(10,24,37,0) 40%);pointer-events:none}
 .hero-fotolink{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px}
 .hero-fotolink:hover{color:#fff;border-color:#fff}
-.hero-landschap{position:absolute;inset:auto 0 -1px 0;width:100%;aspect-ratio:1440/460;pointer-events:none}
+.hero-landschap{z-index:1;position:absolute;inset:auto 0 -1px 0;width:100%;aspect-ratio:1440/460;pointer-events:none}
 .hero-landschap svg{width:100%;height:100%;display:block}
-.sterren{position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 12% 18%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 28% 9%,#fff9 50%,transparent 51%),radial-gradient(1.5px 1.5px at 47% 22%,#fff6 50%,transparent 51%),radial-gradient(1px 1px at 66% 12%,#fff9 50%,transparent 51%),radial-gradient(1.5px 1.5px at 83% 25%,#fff7 50%,transparent 51%),radial-gradient(1px 1px at 92% 8%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 5% 35%,#fff6 50%,transparent 51%);pointer-events:none}
+.sterren{position:absolute;inset:0;z-index:1;background-image:radial-gradient(1.5px 1.5px at 12% 18%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 28% 9%,#fff9 50%,transparent 51%),radial-gradient(1.5px 1.5px at 47% 22%,#fff6 50%,transparent 51%),radial-gradient(1px 1px at 66% 12%,#fff9 50%,transparent 51%),radial-gradient(1.5px 1.5px at 83% 25%,#fff7 50%,transparent 51%),radial-gradient(1px 1px at 92% 8%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 5% 35%,#fff6 50%,transparent 51%);pointer-events:none}
 .hero>.container{width:100%}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
 .hero-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:8px 16px;border-radius:999px;font-size:.88rem;font-weight:600;margin-bottom:26px}
@@ -385,7 +385,7 @@ footer p{color:rgba(255,255,255,.6);margin-top:16px;max-width:320px}
   .nav{height:68px}
   .menu{top:68px}
   .logo svg{width:32px;height:32px}
-  .hero{padding:100px 0 50px;min-height:auto}
+  .hero{padding:100px 0 150px;min-height:auto}
   .hero::before{background:linear-gradient(180deg,rgba(10,24,37,.82) 0%,rgba(10,24,37,.65) 55%,rgba(10,24,37,.85) 100%)}
   .hero-intro{font-size:1.05rem;margin:18px 0 26px}
   .hero-knoppen{flex-direction:column}
@@ -450,6 +450,28 @@ footer p{color:rgba(255,255,255,.6);margin-top:16px;max-width:320px}
 
 <!-- HERO -->
 <section class="hero">
+  <div class="sterren"></div>
+  <div class="hero-landschap" aria-hidden="true">
+    <svg viewBox="0 100 1440 460" preserveAspectRatio="xMidYMax meet">
+      <defs>
+        <linearGradient id="b1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D6B8E"/><stop offset="1" stop-color="#24496A"/></linearGradient>
+        <linearGradient id="b2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9F1F7"/><stop offset="1" stop-color="#B9CEDD"/></linearGradient>
+        <linearGradient id="b3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E3ECF3"/></linearGradient>
+        <radialGradient id="zon" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFD08A"/><stop offset=".55" stop-color="#F08C1C" stop-opacity=".55"/><stop offset="1" stop-color="#F08C1C" stop-opacity="0"/></radialGradient>
+      </defs>
+      <circle cx="1150" cy="250" r="140" fill="url(#zon)"/>
+      <circle cx="1150" cy="250" r="40" fill="#FFC069"/>
+      <path d="M0 330 L170 210 L280 280 L430 140 L560 250 L690 170 L820 270 L960 120 L1110 260 L1240 190 L1440 300 L1440 560 L0 560Z" fill="url(#b1)" opacity=".75"/>
+      <path d="M0 400 L210 250 L330 330 L520 180 L700 340 L860 230 L1020 350 L1210 220 L1440 360 L1440 560 L0 560Z" fill="url(#b2)"/>
+      <path d="M520 180 L580 235 L555 228 L540 250 L515 226 L490 238Z" fill="#fff"/>
+      <path d="M1210 220 L1262 262 L1240 256 L1226 274 L1204 254 L1184 262Z" fill="#fff"/>
+      <path d="M0 470 C200 420 380 450 560 430 C760 408 940 450 1120 428 C1260 412 1360 430 1440 420 L1440 560 L0 560Z" fill="url(#b3)"/>
+      <g fill="#0E2233" opacity=".85">
+        <path d="M120 470 l14 -40 l14 40z"/><path d="M150 476 l11 -30 l11 30z"/><path d="M1280 450 l15 -44 l15 44z"/><path d="M1312 458 l11 -32 l11 32z"/><path d="M1250 462 l9 -26 l9 26z"/>
+      </g>
+      <path d="M700 340 C690 380 720 410 760 440" stroke="#fff" stroke-width="3" fill="none" stroke-dasharray="2 10" stroke-linecap="round" opacity=".9"/>
+    </svg>
+  </div>
   <div class="container hero-grid grid-reset">
     <div>
       <div class="hero-tag"><span class="punt"></span>Avoriaz · Portes du Soleil · 1800 m</div>
