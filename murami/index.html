@@ -320,6 +320,22 @@ footer ul a:hover{color:var(--goud)}
 .mob-balk a.hoofd{background:var(--groen);color:#fff}
 .mob-balk a.hoofd svg.i{color:var(--goud)}
 
+
+/* cookies */
+.ck{position:fixed;left:28px;bottom:28px;z-index:65;width:288px;background:#fff;border:1px solid var(--rand);border-radius:20px;padding:20px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 18px 40px -16px rgba(0,0,0,.3);display:none}
+.ck.toon{display:block;animation:fbin .3s ease}
+.ck-in{display:flex;gap:12px}
+.ck-ic{width:40px;height:40px;border-radius:50%;background:var(--goud-t);color:var(--goud-d);display:grid;place-items:center;flex-shrink:0}
+.ck-ic svg{width:20px;height:20px}
+.ck b{display:block;font-size:.875rem;font-weight:600;color:var(--tekst)}
+.ck p{font-size:.75rem;line-height:1.55;margin-top:2px}
+.ck button{margin-top:16px;width:100%;background:var(--groen);color:#fff;border:0;border-radius:50px;padding:10px 20px;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.ck button:hover{background:var(--ink)}
+.ck-knop{position:fixed;left:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--groen);color:var(--goud);border:2px solid #fff;display:none;place-items:center;cursor:pointer;box-shadow:0 10px 25px rgba(18,48,5,.35)}
+.ck-knop.toon{display:grid}
+.ck-knop svg{width:26px;height:26px}
+@media (max-width:760px){.ck{left:10px;right:10px;width:auto;bottom:74px}.ck-knop{bottom:78px;left:14px;width:52px;height:52px}body.menu-open .ck-knop{display:none}}
+
 /* RESPONSIVE */
 @media (max-width:1180px){
   .topbar{display:none}
@@ -882,6 +898,8 @@ I plan to work with Murami Consulting again for my bathroom renovation next year
   </div>
 </footer>
 
+<div class="ck" id="ck" role="dialog" aria-label="Cookies"><div class="ck-in"><span class="ck-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01M16 15.5v.01M12 12v.01M11 17v.01M7 14v.01"/></svg></span><div><b>Cookies</b><p>This website uses cookies to improve your experience. By continuing, you agree to this.</p></div></div><button id="ck-ok">Accept</button></div>
+<button class="ck-knop" id="ck-knop" aria-label="Cookie settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01M16 15.5v.01M12 12v.01M11 17v.01M7 14v.01"/></svg></button>
 <a class="wa" href="https://wa.me/31624949614" aria-label="WhatsApp Murami"><svg><use href="#wa"/></svg></a>
 <nav class="mob-balk">
   <a href="tel:+31624949614"><svg class="i"><use href="#tel"/></svg>Call</a>
@@ -912,6 +930,12 @@ var fv=document.getElementById('fb-venster'),x0=null;
 fv.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
 fv.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)toon(fi+(d<0?1:-1));x0=null});
 document.getElementById('quote-form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-ok').style.display='block'});
+// cookies
+var ck=document.getElementById('ck'),ckk=document.getElementById('ck-knop'),ok=false;
+try{ok=localStorage.getItem('murami-ck')==='1'}catch(e){}
+(ok?ckk:ck).classList.add('toon');
+document.getElementById('ck-ok').onclick=function(){try{localStorage.setItem('murami-ck','1')}catch(e){}ck.classList.remove('toon');ckk.classList.add('toon')};
+ckk.onclick=function(){ckk.classList.remove('toon');ck.classList.add('toon')};
 </script>
 </body>
 </html>
