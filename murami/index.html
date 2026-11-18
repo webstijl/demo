@@ -336,6 +336,15 @@ footer ul a:hover{color:var(--goud)}
 .ck-knop svg{width:26px;height:26px}
 @media (max-width:760px){.ck{left:10px;right:10px;width:auto;bottom:74px}.ck-knop{bottom:78px;left:14px;width:52px;height:52px}body.menu-open .ck-knop{display:none}}
 
+
+/* taalswitch */
+.taal{display:inline-flex;background:var(--surface);border:1px solid var(--rand);border-radius:50px;padding:3px;gap:2px}
+.taal a{padding:6px 12px;border-radius:50px;font-size:.82rem;font-weight:700;color:var(--muted);line-height:1.2;transition:.2s}
+.taal a.aan{background:#fff;color:var(--groen);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.taal.mob{display:none}
+@media (max-width:1320px){.menu{gap:2px}.menu>li>a{padding:8px 10px}}
+@media (max-width:1180px){.nav-r .taal{display:none}.taal.mob{display:inline-flex;margin:14px 20px 4px;align-self:flex-start}.menu.open>li.taal>a{padding:6px 14px;border:0;border-radius:50px;font-size:.82rem}body.menu-open .ck{display:none}}
+
 /* RESPONSIVE */
 @media (max-width:1180px){
   .topbar{display:none}
@@ -449,6 +458,7 @@ footer ul a:hover{color:var(--goud)}
   <div class="wrap nav">
     <a href="#" class="logo"><img src="https://murami.nl/wp-content/uploads/2025/02/Logo-Default.png" alt="Murami Consulting" width="180" height="46"></a>
     <ul class="menu" id="menu">
+      <li class="taal mob"><a href="#" lang="nl" hreflang="nl">NL</a><a href="#" class="aan" lang="en" hreflang="en">EN</a></li>
       <li><a href="#" class="actief">Home</a></li>
       <li><a href="https://murami.nl/projects/">Projects</a></li>
       <li><a href="https://murami.nl/about/">About Us</a></li>
@@ -464,6 +474,7 @@ footer ul a:hover{color:var(--goud)}
       <li><a href="#quote">Contact</a></li>
     </ul>
     <div class="nav-r">
+      <div class="taal"><a href="#" lang="nl" hreflang="nl">NL</a><a href="#" class="aan" lang="en" hreflang="en">EN</a></div>
       <a href="#quote" class="knop k-groen">Get a Quote <svg class="i goud"><use href="#pijl"/></svg></a>
       <a class="rond mob" href="tel:+31624949614" aria-label="Call Murami"><svg class="i"><use href="#tel"/></svg></a>
       <a class="rond mob" href="#quote" aria-label="Get a Quote"><svg class="i"><use href="#doc"/></svg></a>
@@ -912,6 +923,8 @@ var hdr=document.getElementById('header'),hb=document.getElementById('hamburger'
 function sluit(){menu.classList.remove('open');hb.setAttribute('aria-expanded',false);document.body.classList.remove('menu-open')}
 hb.addEventListener('click',function(){menu.style.setProperty('--menu-top',hdr.getBoundingClientRect().bottom+'px');var o=menu.classList.toggle('open');hb.setAttribute('aria-expanded',o);document.body.classList.toggle('menu-open',o)});
 menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',sluit)});
+// taalswitch (demo)
+document.querySelectorAll(".taal a").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();document.querySelectorAll(".taal a").forEach(function(b){b.classList.toggle("aan",b.lang===a.lang)})})});
 // wisselende strook op mobiel
 var st=[].slice.call(document.querySelectorAll('#strook span')),si=0;
 setInterval(function(){if(innerWidth>860)return;st[si].classList.remove('aan');si=(si+1)%st.length;st[si].classList.add('aan')},3000);
