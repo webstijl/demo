@@ -121,7 +121,7 @@ header{position:sticky;top:0;z-index:50;background:#fff}
 .werkgebied{margin-top:22px;font-size:.88rem;color:rgba(255,255,255,.72)}
 .werkgebied b{color:#fff;font-weight:600}
 .hero-foto{position:relative}
-.hero-foto img{width:100%;aspect-ratio:871/760;object-fit:cover;object-position:center 30%;border-radius:24px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.hero-foto img{width:100%;height:clamp(360px,34vw,500px);object-fit:cover;object-position:center 38%;border-radius:24px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
 .hero-badge{position:absolute;left:-22px;bottom:28px;background:#fff;color:var(--tekst);border-radius:16px;padding:14px 18px;box-shadow:var(--sch);display:flex;gap:12px;align-items:center}
 .hero-badge .icoon{width:42px;height:42px;border-radius:12px}
 .hero-badge small{display:block;font-size:.75rem;color:var(--muted)}
@@ -340,6 +340,7 @@ footer ul a:hover{color:var(--goud)}
   .hero .wrap,.who,.fb-grid,.proc,.faq,.quote-grid{grid-template-columns:1fr;gap:40px}
   .proc .kop,.faq .links{position:static}
   .hero-badge{left:14px}
+  .hero-foto img{height:auto;aspect-ratio:4/3}
   .dienst-grid{grid-template-columns:1fr}
   .verz-grid{grid-template-columns:1fr}
   .logos{grid-template-columns:repeat(3,1fr)}
