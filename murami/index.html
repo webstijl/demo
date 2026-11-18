@@ -184,9 +184,10 @@ header{position:sticky;top:0;z-index:50;background:#fff}
 .fb .eyebrow::before{background:var(--ink)}
 .fb p.lead{color:var(--ink);opacity:.85}
 .fb-kader{background:#fff;border-radius:24px;padding:14px;box-shadow:0 30px 60px -25px rgba(60,40,0,.45)}
-.fb-venster{height:440px;border-radius:14px;background:#fff;overflow:hidden;position:relative}
-.fb-venster img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .35s}
-.fb-venster img.aan{opacity:1}
+.fb-venster{border-radius:14px;background:#fff;overflow:hidden;display:flex;justify-content:center;min-height:160px}
+.fb-venster img{display:none;width:auto;max-width:100%;height:auto;max-height:420px;object-fit:contain}
+.fb-venster img.aan{display:block;animation:fbin .35s ease}
+@keyframes fbin{from{opacity:0}to{opacity:1}}
 .fb-bediening{display:flex;justify-content:space-between;align-items:center;padding:12px 6px 2px}
 .fb-teller{font-size:.85rem;font-weight:600;color:var(--muted)}
 .fb-teller b{color:var(--ink)}
@@ -379,7 +380,7 @@ footer ul a:hover{color:var(--goud)}
   .verz img{width:84px;height:84px}
   .slogan{padding:18px}
   .slogan p{font-size:1rem}
-  .fb-venster{height:380px}
+  .fb-venster img{max-height:380px}
   .logos{grid-template-columns:1fr 1fr;gap:10px}
   .form{padding:22px 16px}
   .velden{grid-template-columns:1fr}
