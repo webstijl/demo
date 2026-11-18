@@ -7,6 +7,8 @@
 <title>Murami Consulting | Renovation Services in the Netherlands</title>
 <meta name="description" content="Renovation services for locals, expats and internationals in the Netherlands. Contact Murami Consulting for house, bathroom, kitchen, and exterior renovations.">
 <!-- DEMO murami.nl — vernieuwde homepage door WEBSTIJL. Teksten, secties en volgorde van de huidige homepage zijn behouden. -->
+<link rel="alternate" hreflang="en" href="https://demo.webstijl.be/murami/">
+<link rel="alternate" hreflang="nl" href="https://demo.webstijl.be/murami/nl/">
 <link rel="icon" href="https://murami.nl/wp-content/uploads/2025/02/Favi.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -458,7 +460,7 @@ footer ul a:hover{color:var(--goud)}
   <div class="wrap nav">
     <a href="#" class="logo"><img src="https://murami.nl/wp-content/uploads/2025/02/Logo-Default.png" alt="Murami Consulting" width="180" height="46"></a>
     <ul class="menu" id="menu">
-      <li class="taal mob"><a href="#" lang="nl" hreflang="nl">NL</a><a href="#" class="aan" lang="en" hreflang="en">EN</a></li>
+      <li class="taal mob"><a href="nl/" lang="nl" hreflang="nl">NL</a><a href="./" class="aan" lang="en" hreflang="en">EN</a></li>
       <li><a href="#" class="actief">Home</a></li>
       <li><a href="https://murami.nl/projects/">Projects</a></li>
       <li><a href="https://murami.nl/about/">About Us</a></li>
@@ -474,7 +476,7 @@ footer ul a:hover{color:var(--goud)}
       <li><a href="#quote">Contact</a></li>
     </ul>
     <div class="nav-r">
-      <div class="taal"><a href="#" lang="nl" hreflang="nl">NL</a><a href="#" class="aan" lang="en" hreflang="en">EN</a></div>
+      <div class="taal"><a href="nl/" lang="nl" hreflang="nl">NL</a><a href="./" class="aan" lang="en" hreflang="en">EN</a></div>
       <a href="#quote" class="knop k-groen">Get a Quote <svg class="i goud"><use href="#pijl"/></svg></a>
       <a class="rond mob" href="tel:+31624949614" aria-label="Call Murami"><svg class="i"><use href="#tel"/></svg></a>
       <a class="rond mob" href="#quote" aria-label="Get a Quote"><svg class="i"><use href="#doc"/></svg></a>
@@ -923,8 +925,6 @@ var hdr=document.getElementById('header'),hb=document.getElementById('hamburger'
 function sluit(){menu.classList.remove('open');hb.setAttribute('aria-expanded',false);document.body.classList.remove('menu-open')}
 hb.addEventListener('click',function(){menu.style.setProperty('--menu-top',hdr.getBoundingClientRect().bottom+'px');var o=menu.classList.toggle('open');hb.setAttribute('aria-expanded',o);document.body.classList.toggle('menu-open',o)});
 menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',sluit)});
-// taalswitch (demo)
-document.querySelectorAll(".taal a").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();document.querySelectorAll(".taal a").forEach(function(b){b.classList.toggle("aan",b.lang===a.lang)})})});
 // wisselende strook op mobiel
 var st=[].slice.call(document.querySelectorAll('#strook span')),si=0;
 setInterval(function(){if(innerWidth>860)return;st[si].classList.remove('aan');si=(si+1)%st.length;st[si].classList.add('aan')},3000);
