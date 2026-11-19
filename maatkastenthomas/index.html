@@ -10,7 +10,7 @@
 <link rel="icon" href="https://primary.jwwb.nl/public/y/g/r/temp-cggpifxtlgakfpyqktil/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Archivo:wght@700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "name": "Maatkasten Thomas", "url": "https://www.maatkastenthomas.be/", "telephone": "+32476854007", "email": "maatkasten@proximus.be", "vatID": "BE0734618810", "address": {"@type": "PostalAddress", "streetAddress": "Brabantsebaan 50", "postalCode": "3271", "addressLocality": "Zichem", "addressCountry": "BE"}, "areaServed": ["Zichem", "Scherpenheuvel", "Averbode", "Testelt", "Messelbroek", "Diest", "Aarschot", "Tielt-Winge", "Begijnendijk", "Westerlo", "Herselt", "Bekkevoort"], "sameAs": ["https://facebook.com/sadrikeukens", "https://pinterest.com/sadrikeukens"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Maken jullie de kasten zelf?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Al onze maatkasten maken we zelf in ons eigen atelier in Zichem. Daardoor kunnen we elk meubel volledig op maat maken, ook voor een schuine wand, een trap of een ruimte met een onregelmatige vorm."}}, {"@type": "Question", "name": "Kan je ook een kast laten maken onder een schuin dak of onder de trap?", "acceptedAnswer": {"@type": "Answer", "text": "Zeker. Juist daar maakt maatwerk het verschil. We werken de kasten mooi aan tegen de dakhelling of onder de treden, zodat je extra opbergruimte krijgt en geen stofhoeken overhoudt."}}, {"@type": "Question", "name": "Uit welke materialen kan ik kiezen?", "acceptedAnswer": {"@type": "Answer", "text": "Je kiest uit MDF, gelakt of hoogglans gelakt, poederlak, melamine, laminaat, fineer van Querkus of massief hout. We bespreken samen wat het best past bij de ruimte, het gebruik en je budget."}}, {"@type": "Question", "name": "Kan ik vooraf zien hoe mijn kast eruit zal zien?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Met de 3D-visualisatie van Egger en Innovus kan je de decors en kleuren vooraf bekijken. Zo kies je met een gerust gevoel."}}, {"@type": "Question", "name": "Plaatsen jullie ook keukentoestellen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Je kan bij ons terecht voor de aankoop en plaatsing van je toestellen, met scherpe prijzen op Neff. Kleine aanpassingen aan elektriciteit en sanitair voeren we zelf uit."}}, {"@type": "Question", "name": "Kan ik alleen panelen laten verzagen voor een eigen project?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Op basis van je zaaglijst verzagen en afplakken we de panelen die je kiest, met groeven, rijboringen, drevelen en scharnierboringen. Ook scharnieren en lades van Hettich en ander beslag kan je bij ons krijgen."}}, {"@type": "Question", "name": "Kan ik het atelier bezoeken?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, op afspraak. Bel of stuur een bericht naar 0476 85 40 07 en we spreken een moment af."}}, {"@type": "Question", "name": "Is een offerte gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. We komen langs om op te meten en je krijgt een concrete prijsofferte, volledig vrijblijvend."}}]}</script>
 <style>
@@ -228,6 +228,60 @@ footer ul{list-style:none;display:grid;gap:9px}footer ul a:hover{color:#F2A57A}
   .soc-k{padding:20px}
 }
 @media (max-width:380px){.logo img{height:34px}.nav-r{gap:6px}.ik{width:40px;height:40px}}
+
+/* ===== eigen stijl maatwerk ===== */
+:root{--r:6px}
+body{counter-reset:sec}
+h1,h2,h3,h4{font-family:'Inter Tight',sans-serif;letter-spacing:-.03em}
+h2{font-weight:700;font-size:clamp(1.9rem,3.2vw,2.6rem)}
+.eyebrow{counter-increment:sec;font-family:'Inter Tight';letter-spacing:.16em;color:var(--tekst);gap:12px}
+.eyebrow::before{content:counter(sec,decimal-leading-zero);width:auto;height:auto;background:none;color:var(--koper);font-weight:800;letter-spacing:.04em;padding-right:12px;border-right:2px solid var(--koper);line-height:1}
+.diensten .eyebrow,.quote .eyebrow{color:#fff}
+.knop{border-radius:3px;font-family:'Inter Tight';letter-spacing:.08em;font-size:.82rem}
+.kaart,.af,.faq-item,.form,.who-foto img,.proj img,.dienst{border-radius:var(--r)}
+.kaart{box-shadow:none}.kaart:hover{border-color:var(--koper)}
+.icoon{border-radius:3px;background:var(--tekst);color:#fff}
+.af{border-left-width:0;border-top:4px solid var(--koper);background:#fff;box-shadow:none;border:1px solid var(--rand);border-top:4px solid var(--koper)}
+.ik{border-radius:3px}
+header{border-bottom:1px solid var(--rand)}
+.nav{height:84px}
+.strook{background:var(--surface);color:var(--tekst);border-top:1px solid var(--rand)}
+.strook svg.i{color:var(--koper)}
+/* lichte split-hero */
+.hero{background:var(--surface);color:var(--tekst);padding:70px 0 90px}
+.hero::before{display:none}
+.hero h1{color:var(--tekst);font-size:clamp(2.6rem,5vw,4.4rem);font-weight:800;line-height:1}
+.hero h1 span{color:var(--koper)}
+.hero .sub-t{color:var(--muted)}
+.hero .eyebrow{color:var(--tekst)}
+.hero .k-lijn-w{border-color:var(--tekst);color:var(--tekst);background:transparent}.hero .k-lijn-w:hover{background:var(--tekst);color:#fff}
+.chip-s{border-color:var(--rand);color:var(--tekst);background:#fff}
+.werkgebied{color:var(--muted)}.werkgebied b{color:var(--tekst)}
+.hero-foto{position:relative;margin:0;padding:34px 0 0 34px}
+.hero-foto img{width:100%;aspect-ratio:4/4.4;object-fit:cover;border-radius:4px}
+.maatlijn{position:absolute;top:8px;left:34px;right:0;height:14px;border-left:2px solid var(--koper);border-right:2px solid var(--koper)}
+.maatlijn::before{content:"";position:absolute;left:0;right:0;top:6px;height:2px;background:var(--koper)}
+.maatlijn span{position:absolute;left:50%;top:-4px;transform:translateX(-50%);background:var(--surface);padding:0 10px;font-family:'Inter Tight';font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--koper);white-space:nowrap}
+.hero-foto::after{content:"";position:absolute;left:8px;top:34px;bottom:0;width:14px;border-top:2px solid var(--koper);border-bottom:2px solid var(--koper)}
+.hero-foto::before{content:"";position:absolute;left:14px;top:34px;bottom:0;width:2px;background:var(--koper)}
+.hero-foto figcaption{position:absolute;right:18px;bottom:18px;background:#fff;border-radius:4px;padding:14px 18px;font-size:.88rem;box-shadow:0 18px 40px -20px rgba(0,0,0,.35);max-width:220px}
+.hero-foto figcaption b{display:block;font-family:'Inter Tight';font-size:1.8rem;color:var(--koper);line-height:1}
+/* diensten licht met nummers */
+.diensten{background:var(--surface);color:var(--tekst)}
+.diensten h2{color:var(--tekst)}.diensten .kop .lead{color:var(--muted)}.diensten .eyebrow{color:var(--tekst)}
+.d-grid{counter-reset:d}
+.dienst{border:1px solid var(--rand);counter-increment:d}
+.dienst:hover{box-shadow:none;border-color:var(--koper)}
+.dienst .body{position:relative}
+.dienst .body::before{content:counter(d,decimal-leading-zero);position:absolute;right:18px;top:16px;font-family:'Inter Tight';font-weight:800;font-size:1.6rem;color:var(--rand)}
+.dienst img{aspect-ratio:4/3}
+.diensten .k-lijn-w{border-color:var(--tekst);color:var(--tekst)}.diensten .k-lijn-w:hover{background:var(--tekst);color:#fff}
+.nr{border-radius:3px;background:var(--tekst);border-color:var(--tekst);color:#fff}
+#over,#keukens,#werkwijze,#realisaties{background:#fff}
+#waarom{background:var(--surface)}
+.diensten .dienst{background:#fff}
+@media (max-width:1024px){.hero-foto{max-width:640px}}
+@media (max-width:640px){.hero{padding:40px 0 60px}.hero-foto{padding:28px 0 0 26px}.maatlijn{left:26px}.hero-foto figcaption{right:10px;bottom:10px}}
 </style>
 </head>
 <body>
@@ -256,16 +310,6 @@ footer ul{list-style:none;display:grid;gap:9px}footer ul a:hover{color:#F2A57A}
 </svg>
 
 <header id="header">
-  <div class="topbar"><div class="wrap">
-    <div class="l">
-      <a href="#werkgebied"><svg class="i"><use href="#pin"/></svg>Eigen atelier in Zichem</a>
-      <a href="mailto:maatkasten@proximus.be"><svg class="i"><use href="#mail"/></svg>maatkasten@proximus.be</a>
-      <a href="tel:+32476854007"><svg class="i"><use href="#tel"/></svg>0476 85 40 07</a>
-    </div>
-    <div class="r">
-      <a href="#offerte"><svg class="i"><use href="#kal"/></svg>Bezoek aan het atelier op afspraak</a>
-    </div>
-  </div></div>
   <div class="wrap nav">
     <a href="#" class="logo"><img src="https://primary.jwwb.nl/public/y/g/r/temp-cggpifxtlgakfpyqktil/usnsgd/factuurlogo.jpg?enable-io=true&amp;enable=upscale&amp;height=112" alt="Maatkasten Thomas" width="150" height="56"></a>
     <ul class="menu" id="menu">
@@ -297,7 +341,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer ul a:hover{color:#F2A57A}
   <div class="wrap grid">
     <div>
       <span class="eyebrow">Maatkasten en keukens uit Zichem</span>
-      <h1>Kasten op maat, omdat elke centimeter telt</h1>
+      <h1>Kasten op maat, omdat <span>elke centimeter</span> telt</h1>
       <p class="sub-t">Dressings, inbouwkasten, keukens en meubels op maat. Alles wordt gemaakt in ons eigen atelier in Zichem, dus we benutten elke beschikbare centimeter: tegen een rechte muur, onder de trap of onder het dak.</p>
       <div class="knoppen">
         <a href="#offerte" class="knop k-koper">Gratis offerte aanvragen <svg class="i"><use href="#pijl"/></svg></a>
@@ -306,22 +350,11 @@ footer ul{list-style:none;display:grid;gap:9px}footer ul a:hover{color:#F2A57A}
       <span class="chip-s"><svg class="i"><use href="#huis"/></svg>Eigen atelier · 100% maatwerk</span>
       <p class="werkgebied"><b>Werkgebied:</b> Zichem · Scherpenheuvel · Averbode · Testelt · Messelbroek · Diest · Aarschot · Tielt-Winge · Begijnendijk · Westerlo · Herselt · Bekkevoort</p>
     </div>
-    <form class="form" id="form-1">
-      <h2>Vraag je gratis offerte aan</h2>
-      <p>Vertel kort wat je zoekt. We nemen snel contact op en komen graag langs om op te meten.</p>
-      <div class="velden">
-        <div class="veld"><label for="a1">Naam *</label><input id="a1" required placeholder="Voor- en achternaam"></div>
-        <div class="veld"><label for="a2">Telefoon *</label><input id="a2" type="tel" required placeholder="04.. .. .. .."></div>
-        <div class="veld"><label for="a3">E-mail *</label><input id="a3" type="email" required placeholder="naam@voorbeeld.be"></div>
-        <div class="veld"><label for="a4">Gemeente</label><input id="a4" placeholder="Bv. Zichem"></div>
-        <div class="veld breed"><label for="a5">Wat wil je laten maken?</label>
-          <select id="a5"><option>Dressing of inloopkast</option><option>Inbouwkast slaapkamer</option><option>Keuken op maat</option><option>Badkamermeubel</option><option>Tv- of woonkamermeubel</option><option>Bureau of kantoorkast</option><option>Kast onder de trap of onder het dak</option><option>Berging of wasplaats</option><option>Zaagwerk van panelen</option></select></div>
-        <div class="veld breed"><label for="a6">Omschrijf je project</label><textarea id="a6" placeholder="Bv. dressing onder schuin dak, ongeveer 3 m breed, met schuifdeuren en lades."></textarea></div>
-      </div>
-      <div class="knoppen"><button type="submit" class="knop k-koper">Offerte aanvragen <svg class="i"><use href="#pijl"/></svg></button><a href="tel:+32476854007" class="knop k-lijn"><svg class="i"><use href="#tel"/></svg>Bellen</a></div>
-      <p class="form-noot">Je aanvraag komt rechtstreeks bij ons terecht op maatkasten@proximus.be.</p>
-      <div class="form-ok">Demo: op de echte website komt je aanvraag rechtstreeks bij Maatkasten Thomas terecht.</div>
-    </form>
+    <figure class="hero-foto">
+      <div class="maatlijn"><span>op maat gemaakt in Zichem</span></div>
+      <img src="https://primary.jwwb.nl/public/y/g/r/temp-cggpifxtlgakfpyqktil/IMG_3040.jpg?enable-io=true&amp;width=1400" alt="Keuken met eiken eiland door Maatkasten Thomas" width="900" height="1100">
+      <figcaption><b>100%</b> eigen productie in ons atelier</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -383,7 +416,7 @@ footer ul{list-style:none;display:grid;gap:9px}footer ul a:hover{color:#F2A57A}
 
 <section id="keukens">
   <div class="wrap who grid">
-    <div class="who-foto"><img src="https://primary.jwwb.nl/public/y/g/r/temp-cggpifxtlgakfpyqktil/IMG_3040.jpg?enable-io=true&amp;width=1200" alt="Witte keuken met eiken eiland" loading="lazy"></div>
+    <div class="who-foto"><img src="https://primary.jwwb.nl/public/y/g/r/temp-cggpifxtlgakfpyqktil/20200222_103106.jpg?enable-io=true&amp;width=1200" alt="Keuken op maat" loading="lazy"></div>
     <div>
       <span class="eyebrow">Keukens op maat</span>
       <h2 style="margin-top:12px">Een keuken die past, tot in de hoeken</h2>
