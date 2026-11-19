@@ -266,14 +266,14 @@ header{position:fixed;left:0;right:0;top:0;background:transparent;box-shadow:non
 header .topbar{background:rgba(10,32,24,.55);backdrop-filter:blur(6px)}
 header .menu>li>a{color:#fff}
 header .menu>li>a:hover,header .menu>li>a.actief{color:var(--acc-l)}
-header .logo{background:#fff;padding:6px 12px;border-radius:12px}
+header .logo{background:none;padding:0}header .logo img{filter:brightness(0) invert(1);transition:filter .3s}
 header .ik.lijn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3)}
 header #hamburger span{background:#fff}
 header.vast{background:#fff;box-shadow:0 10px 30px -22px rgba(0,0,0,.35)}
 header.vast .topbar{background:var(--ink);backdrop-filter:none}
 header.vast .menu>li>a{color:var(--tekst)}
 header.vast .menu>li>a:hover,header.vast .menu>li>a.actief{color:var(--acc)}
-header.vast .logo{padding:6px 0}
+header.vast .logo img,body.menu-open header .logo img{filter:none}
 header.vast .ik.lijn{background:#fff;border-color:var(--rand)}
 header.vast #hamburger span,body.menu-open header #hamburger span{background:var(--tekst)}
 body.menu-open header{background:#fff}body.menu-open header .ik.lijn{background:#fff;border-color:var(--rand)}
@@ -335,7 +335,7 @@ footer{background:var(--diep)}
 @media (max-width:1180px){.jl-hero{min-height:0;padding:170px 0 64px}.topbar{display:block;font-size:.8rem}.jl-grid{grid-template-columns:1fr 1fr}.revs{grid-template-columns:1fr 1fr}}
 @media (max-width:1024px){.jl-hero .wrap,.premie{grid-template-columns:1fr}.jl-zij{justify-items:start}.jl-cert{justify-content:flex-start}.premie{padding:32px 24px}}
 @media (max-width:760px){.tb-x{display:none!important}.proj{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}
-@media (max-width:640px){.jl-hero{padding:150px 0 56px;min-height:0}.jl-hero .knoppen .knop{flex:1 1 100%}.jl-grid,.revs{grid-template-columns:1fr}.logo img{height:34px}header .logo{padding:5px 9px}}
+@media (max-width:640px){.jl-hero{padding:150px 0 56px;min-height:0}.jl-hero .knoppen .knop{flex:1 1 100%}.jl-grid,.revs{grid-template-columns:1fr}.logo img{height:38px}}
 
 </style>
 </head>
