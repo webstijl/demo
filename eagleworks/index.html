@@ -14,7 +14,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "name": "EagleWorks", "url": "https://www.eagleworks.be/", "telephone": "+32495604787", "email": "info@eagleworks.be", "vatID": "BE0768720644", "founder": "Thijs Van Cauwenbergh", "address": {"@type": "PostalAddress", "addressLocality": "Bekkevoort", "postalCode": "3460", "addressCountry": "BE"}, "areaServed": ["Bekkevoort", "Assent", "Molenbeek-Wersbeek", "Diest", "Halen", "Kortenaken", "Glabbeek", "Tielt-Winge", "Scherpenheuvel-Zichem", "Aarschot", "Lubbeek", "Tienen"], "sameAs": ["https://www.facebook.com/people/EagleWorks/100042064070195/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Werkt Thijs met hout of met staal?", "acceptedAnswer": {"@type": "Answer", "text": "Met allebei, en vaak in combinatie. Thijs studeerde ontwerp- en productietechnologie en volgde een opleiding hout- en metaalbewerking. Zo maakt hij bijvoorbeeld een houten tafel op een stalen onderstel, of een stalen deur met glas."}}, {"@type": "Question", "name": "Maakt Thijs ook het ontwerp?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Je vertelt wat je zoekt en hoe de ruimte eruitziet, Thijs werkt het ontwerp uit en maakt het meubel of de constructie daarna zelf. Zo heb je één aanspreekpunt van idee tot plaatsing."}}, {"@type": "Question", "name": "Kan een kast onder een schuin dak of onder de trap?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, dat is typisch maatwerk. Elke centimeter wordt benut, ook in hoeken en onder schuine wanden waar een kast uit de winkel niet past."}}, {"@type": "Question", "name": "Doet EagleWorks ook tuinconstructies?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Tuinhuizen, carports, tuinpoorten, pergola's, terrassen en tuinmeubilair, in hout, staal of een combinatie van beide."}}, {"@type": "Question", "name": "In welke regio werkt EagleWorks?", "acceptedAnswer": {"@type": "Answer", "text": "EagleWorks werkt vanuit Bekkevoort in de ruime omgeving, onder meer in Assent, Diest, Halen, Kortenaken, Glabbeek, Tielt-Winge, Scherpenheuvel-Zichem, Aarschot, Lubbeek en Tienen."}}, {"@type": "Question", "name": "Wat kost een meubel op maat?", "acceptedAnswer": {"@type": "Answer", "text": "Dat hangt af van de afmetingen, het materiaal en de afwerking. Stuur een foto van de ruimte en je idee, dan krijg je een prijs op maat. Een offerte is gratis."}}]}</script>
 <style>
-:root{--blauw:#24548A;--blauw-d:#1A3F69;--acc:#B38865;--acc-d:#8C6546;--acc-t:#F5EEE7;--acc-l:#D3B493;--acc-b:#E6D6C6;--acc-sh:rgba(179,136,101,.45);--acc-ring:rgba(179,136,101,.15);--groen:#1E1E1E;--ink:#1B1A18;--diep:#121110;--surface:#F4F0EA;--rand:#E4DDD3;--tekst:#1B1A18;--muted:#625D56;--sch:0 1px 2px rgba(0,0,0,.05),0 16px 36px -20px rgba(0,0,0,.3);--r:4px;--r-sub:6px;--fh:'Bricolage Grotesque',sans-serif;--fb:'Inter',sans-serif}
+:root{--acc:#2557D6;--acc-d:#1B44AE;--acc-t:#EAF0FC;--acc-l:#8DB0FF;--acc-b:#C9D7F6;--acc-sh:rgba(37,87,214,.45);--acc-ring:rgba(37,87,214,.15);--groen:#14213A;--ink:#0F1A2B;--diep:#0A1220;--surface:#F2F5FA;--rand:#DDE3EE;--tekst:#0F1A2B;--muted:#5A6476;--sch:0 1px 2px rgba(0,0,0,.05),0 16px 36px -20px rgba(15,26,43,.3);--r:4px;--r-sub:6px;--fh:'Bricolage Grotesque',sans-serif;--fb:'Inter',sans-serif}
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:110px;overflow-x:hidden}
@@ -252,8 +252,7 @@ h2{font-size:clamp(2rem,3.4vw,2.8rem);line-height:1.05}
 .eyebrow::before{content:"[";width:auto;height:auto;background:none;color:var(--acc)}
 .eyebrow::after{content:"]";color:var(--acc)}
 .knop{border-radius:2px;text-transform:none;letter-spacing:0;font-weight:600;font-family:var(--fb)}
-.k-acc{background:var(--blauw);color:#fff;box-shadow:0 12px 24px -14px rgba(36,84,138,.6)}.k-acc:hover{background:var(--blauw-d)}
-.ck button,.ck-knop{background:var(--blauw)}
+.k-acc{background:var(--acc);color:#fff;box-shadow:0 12px 24px -14px var(--acc-sh)}.k-acc:hover{background:var(--acc-d)}
 .k-lijn{border-color:var(--ink);color:var(--ink)}.k-lijn:hover{background:var(--ink);color:#fff}
 .menu>li>a{text-transform:none;letter-spacing:0;font-family:var(--fb);font-weight:600;font-size:.95rem;white-space:nowrap}
 .menu>li>a:hover,.menu>li>a.actief{color:var(--acc-d)}
@@ -261,7 +260,7 @@ h2{font-size:clamp(2rem,3.4vw,2.8rem);line-height:1.05}
 .f-logo{background:#fff;padding:8px 12px;border-radius:2px}.f-logo img{height:56px}
 header{border-bottom:1px solid var(--rand)}
 .kaart,.af,.faq-item,.form{border-radius:4px}
-.strook{background:var(--acc-d);color:#fff}
+.strook{background:var(--ink);color:#fff}.strook svg.i{color:var(--acc-l)}
 .icoon{border-radius:2px}
 /* hero: tekst + fotomozaiek */
 .ew-hero{background:var(--surface);padding:64px 0 80px;border-bottom:1px solid var(--rand)}
@@ -271,7 +270,7 @@ header{border-bottom:1px solid var(--rand)}
 .ew-hero .sub-t{font-size:1.12rem;margin-top:20px;max-width:540px;color:var(--muted)}
 .ew-hero .werkgebied{color:var(--muted)}.ew-hero .werkgebied b{color:var(--tekst)}
 .mozaiek{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:1fr 1fr;gap:10px;height:520px}
-.mozaiek img{width:100%;height:100%;object-fit:cover;background:#e3dcd2}
+.mozaiek img{width:100%;height:100%;object-fit:cover;background:#e3e8f0}
 .mozaiek img:first-child{grid-row:span 2}
 .mozaiek figure{position:relative;margin:0;min-height:0}
 .mozaiek figcaption{position:absolute;left:10px;bottom:10px;background:rgba(18,17,16,.82);color:#fff;font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:5px 9px}
@@ -290,7 +289,7 @@ header{border-bottom:1px solid var(--rand)}
 .ew-d{grid-column:span 2;border:1px solid var(--rand);background:#fff;display:flex;flex-direction:column;transition:.25s;scroll-margin-top:120px}
 .ew-d:nth-child(4),.ew-d:nth-child(5){grid-column:span 3}
 .ew-d:hover{border-color:var(--ink)}
-.ew-d img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#e3dcd2;filter:saturate(.95)}
+.ew-d img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#e3e8f0;filter:saturate(.95)}
 .ew-d .body{padding:22px;display:flex;flex-direction:column;flex:1}
 .ew-d .nrtje{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--acc)}
 .ew-d h3{font-size:1.35rem;margin:4px 0 10px}
