@@ -261,20 +261,38 @@ header{box-shadow:0 1px 0 var(--rand)}
 .topbar .tb{display:flex;justify-content:space-between;align-items:center;height:40px;gap:16px}.topbar .tb>*{display:inline-flex;gap:7px;align-items:center;white-space:nowrap}
 .topbar svg.i{color:var(--acc-l)}
 .strook{background:var(--acc);}
-/* hero */
-.jl-hero{background:radial-gradient(1200px 500px at 90% -10%,var(--acc-t),transparent 60%),#fff;padding:70px 0 90px}
-.jl-hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.jl-hero h1{font-size:clamp(2.4rem,4.6vw,3.9rem);line-height:1.04;margin-top:18px}
-.jl-hero h1 span{color:var(--acc)}
-.jl-hero .sub-t{font-size:1.12rem;margin-top:20px;max-width:560px;color:var(--muted)}
-.jl-hero .werkgebied{color:var(--muted)}.jl-hero .werkgebied b{color:var(--tekst)}
-.jl-foto{position:relative}
-.jl-foto img{width:100%;aspect-ratio:5/4.2;object-fit:cover;border-radius:28px;box-shadow:var(--sch);background:#dfe9e3}
-.jl-rev{position:absolute;left:-30px;bottom:-30px;background:#fff;border:1px solid var(--rand);border-radius:18px;padding:18px 20px;max-width:310px;box-shadow:0 24px 50px -24px rgba(0,0,0,.35)}
-.jl-rev .sterren{color:#F2B33D}.jl-rev p{font-size:.88rem;color:var(--tekst);margin:6px 0}.jl-rev b{font-size:.85rem}
-.jl-cert{position:absolute;right:18px;top:18px;display:grid;gap:8px}
-.jl-cert span{background:rgba(255,255,255,.94);border-radius:50px;padding:7px 13px;font-size:.78rem;font-weight:700;display:inline-flex;gap:6px;align-items:center;box-shadow:var(--sch)}
+/* hero: volledige foto achter header */
+header{position:fixed;left:0;right:0;top:0;background:transparent;box-shadow:none;transition:background .3s,box-shadow .3s}
+header .topbar{background:rgba(10,32,24,.55);backdrop-filter:blur(6px)}
+header .menu>li>a{color:#fff}
+header .menu>li>a:hover,header .menu>li>a.actief{color:var(--acc-l)}
+header .logo{background:#fff;padding:6px 12px;border-radius:12px}
+header .ik.lijn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3)}
+header #hamburger span{background:#fff}
+header.vast{background:#fff;box-shadow:0 10px 30px -22px rgba(0,0,0,.35)}
+header.vast .topbar{background:var(--ink);backdrop-filter:none}
+header.vast .menu>li>a{color:var(--tekst)}
+header.vast .menu>li>a:hover,header.vast .menu>li>a.actief{color:var(--acc)}
+header.vast .logo{padding:6px 0}
+header.vast .ik.lijn{background:#fff;border-color:var(--rand)}
+header.vast #hamburger span,body.menu-open header #hamburger span{background:var(--tekst)}
+body.menu-open header{background:#fff}body.menu-open header .ik.lijn{background:#fff;border-color:var(--rand)}
+@media (max-width:1180px){header .menu.open>li>a{color:var(--tekst)}}
+.jl-hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:#fff;padding:190px 0 90px;background:var(--diep) url('https://lh3.googleusercontent.com/VtP4h2P_k1RLqCXr5hrTX_5GBwukMlJaPxqLUiw1Y-0rm0jwIScgWPXoSTgQin1dKe7o7BwUY-jXLXfNieXNLnji8rHcoHAIqPI=l80-w1500-e365') center 40%/cover no-repeat}
+.jl-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,28,20,.88) 0%,rgba(8,28,20,.6) 50%,rgba(8,28,20,.2) 100%),linear-gradient(0deg,rgba(8,28,20,.6),transparent 40%)}
+.jl-hero .wrap{position:relative;z-index:1;width:100%;display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:end}
+.jl-hero h1{color:#fff;font-size:clamp(2.5rem,5vw,4.3rem);line-height:1.03;margin-top:18px}
+.jl-hero h1 span{color:var(--acc-l)}
+.jl-hero .sub-t{font-size:1.15rem;margin-top:20px;max-width:600px;color:rgba(255,255,255,.85)}
+.jl-hero .werkgebied{color:rgba(255,255,255,.72)}.jl-hero .werkgebied b{color:#fff}
+.jl-hero .eyebrow{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:#fff}
+.jl-hero .k-lijn{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.35);color:#fff}.jl-hero .k-lijn:hover{background:#fff;color:var(--ink)}
+.jl-zij{display:grid;gap:14px;justify-items:end}
+.jl-cert{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.jl-cert span{background:rgba(255,255,255,.94);color:var(--tekst);border-radius:50px;padding:8px 14px;font-size:.8rem;font-weight:700;display:inline-flex;gap:6px;align-items:center}
 .jl-cert svg.i{width:15px;height:15px;color:var(--acc)}
+.jl-rev{background:#fff;color:var(--tekst);border-radius:18px;padding:20px 22px;max-width:340px;box-shadow:0 24px 50px -20px rgba(0,0,0,.5)}
+.jl-rev .sterren{color:#F2B33D}.jl-rev p{font-size:.92rem;color:var(--tekst);margin:6px 0}.jl-rev b{font-size:.85rem}
 /* diensten */
 .diensten{background:var(--surface);color:var(--tekst)}
 .diensten h2{color:var(--tekst)}.diensten .kop .lead{color:var(--muted)}
@@ -315,9 +333,9 @@ header{box-shadow:0 1px 0 var(--rand)}
 footer{background:var(--diep)}
 @media (max-width:1360px){.tb>span.tb-x{display:none}}
 @media (max-width:1180px){.topbar{display:block;font-size:.8rem}.jl-grid{grid-template-columns:1fr 1fr}.revs{grid-template-columns:1fr 1fr}}
-@media (max-width:1024px){.jl-hero .wrap,.premie{grid-template-columns:1fr}.jl-rev{left:12px;bottom:-24px}.premie{padding:32px 24px}}
+@media (max-width:1024px){.jl-hero .wrap,.premie{grid-template-columns:1fr}.jl-zij{justify-items:start}.jl-cert{justify-content:flex-start}.premie{padding:32px 24px}}
 @media (max-width:760px){.tb-x{display:none!important}.proj{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}
-@media (max-width:640px){.jl-hero{padding:36px 0 70px}.jl-hero .knoppen .knop{flex:1 1 100%}.jl-grid,.revs{grid-template-columns:1fr}.jl-rev{position:relative;left:auto;bottom:auto;margin:-40px 12px 0;max-width:none}.logo img{height:38px}.jl-cert{right:10px;top:10px}}
+@media (max-width:640px){.jl-hero{padding:150px 0 56px;min-height:0}.jl-hero .knoppen .knop{flex:1 1 100%}.jl-grid,.revs{grid-template-columns:1fr}.logo img{height:34px}header .logo{padding:5px 9px}}
 
 </style>
 </head>
@@ -386,8 +404,7 @@ footer{background:var(--diep)}
       </div>
       <p class="werkgebied"><b>Werkgebied:</b> Heist-op-den-Berg · Booischot · Itegem · Hallaar · Wiekevorst · Putte · Berlaar · Nijlen · Herenthout · Lier · Bonheiden · Keerbergen</p>
     </div>
-    <div class="jl-foto">
-      <img src="https://lh3.googleusercontent.com/VtP4h2P_k1RLqCXr5hrTX_5GBwukMlJaPxqLUiw1Y-0rm0jwIScgWPXoSTgQin1dKe7o7BwUY-jXLXfNieXNLnji8rHcoHAIqPI=l80-w1500-e365" alt="Advies over zonnepanelen bij JL Group">
+    <div class="jl-zij">
       <div class="jl-cert"><span><svg class="i"><use href="#schild"/></svg>Koeltechniek cat. 1</span><span><svg class="i"><use href="#check"/></svg>RESCert</span></div>
       <div class="jl-rev"><div class="sterren">★★★★★</div><p>"Goede en vlotte service! JL-Group levert proper en kwalitatief werk af!"</p><b>Katrien Vervoort</b></div>
     </div>
