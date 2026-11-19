@@ -255,9 +255,20 @@ h2{font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.15}
 .k-acc{background:var(--acc);color:#fff}.k-acc:hover{background:var(--acc-d)}
 .k-lijn{border-color:var(--rand);color:var(--tekst);background:#fff}.k-lijn:hover{border-color:var(--acc);color:var(--acc);background:#fff}
 .menu>li>a{font-family:var(--fb);font-size:.95rem;font-weight:600;text-transform:none;letter-spacing:0;white-space:nowrap}
-header{border-bottom:1px solid var(--rand)}
-header.vast{box-shadow:0 10px 30px -22px rgba(0,0,0,.35)}
-.logo{background:none;padding:0;border-radius:0}.logo img{height:40px}
+/* groene header met topbalk */
+header{background:#22381A;border-bottom:3px solid var(--acc-l)}
+header.vast{box-shadow:0 12px 30px -18px rgba(0,0,0,.45)}
+.topbar{background:#162510;color:rgba(255,255,255,.82)}
+.topbar span{display:inline-flex;gap:7px;align-items:center}
+.topbar svg.i,.topbar a:hover{color:var(--acc-l)}
+.menu>li>a{color:#fff}
+.menu>li>a:hover,.menu>li>a.actief{color:var(--acc-l)}
+header .k-acc{background:var(--acc-l);color:#1B2714}header .k-acc:hover{background:#fff}
+header .ik{background:var(--acc-l);color:#1B2714}
+header .ik.lijn{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25)}
+#hamburger span{background:#fff}
+.logo{background:#fff;padding:7px 14px;border-radius:10px}.logo img{height:36px}
+@media (max-width:1180px){.menu.open>li>a{color:var(--tekst)}.menu.open>li>a.actief{color:var(--acc)}}
 .f-logo{background:#fff;border-radius:12px;padding:12px 16px}.f-logo img{height:40px}
 .strook{background:var(--acc-t);color:var(--ink);border-bottom:1px solid var(--acc-b)}
 .strook svg.i{color:var(--acc)}
@@ -317,8 +328,8 @@ footer{background:var(--diep)}
 @media (max-width:1180px){.ds-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:1024px){.hero-s .wrap,.spec-grid{grid-template-columns:1fr;gap:44px}.team{grid-template-columns:1fr}.collage{padding:0 0 50px 24px}.collage .badge{right:0}}
 @media (max-width:760px){.proj{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.proj .groot{grid-column:span 2;grid-row:span 1}}
-@media (max-width:640px){.hero-s{padding:36px 0 60px}.hero-s .knoppen .knop{flex:1 1 100%}.ds-grid,.types{grid-template-columns:1fr}.collage{padding:0 0 40px 12px}.collage .badge{padding:12px 14px;max-width:180px;bottom:12px}.collage .badge b{font-size:1.5rem}.logo img{height:32px}}
-@media (max-width:380px){.logo img{height:27px}}
+@media (max-width:640px){.hero-s{padding:36px 0 60px}.hero-s .knoppen .knop{flex:1 1 100%}.ds-grid,.types{grid-template-columns:1fr}.collage{padding:0 0 40px 12px}.collage .badge{padding:12px 14px;max-width:180px;bottom:12px}.collage .badge b{font-size:1.5rem}.logo img{height:28px}.logo{padding:6px 10px}}
+@media (max-width:380px){.logo img{height:23px}}
 
 </style>
 </head>
@@ -357,7 +368,7 @@ footer{background:var(--diep)}
 </svg>
 
 <header id="header">
-  <div class="wrap nav">
+  <div class="topbar"><div class="wrap"><div class="l"><a href="tel:+32472334300"><svg class="i"><use href="#tel"/></svg>0472 33 43 00</a><a href="mailto:ikwilinfo@samfrederickx.be"><svg class="i"><use href="#mail"/></svg>ikwilinfo@samfrederickx.be</a><a href="#werkgebied"><svg class="i"><use href="#pin"/></svg>Messelbroek en omgeving</a></div><div class="r"><span><svg class="i"><use href="#kalender"/></svg>Ma tot za: 9u30 tot 18u</span><a href="https://www.facebook.com/TuindesignSamFrederickx" target="_blank" rel="noopener">Facebook</a></div></div></div><div class="wrap nav">
     <a href="#" class="logo"><img src="https://www.samfrederickx.be/wp-content/uploads/2021/11/logo.png" alt="Tuindesign Sam Frederickx" width="240" height="38"></a>
     <ul class="menu" id="menu">
       <li><a href="" class="actief">Home</a></li><li class="sub"><a href="#diensten">Diensten <svg class="i"><use href="#pijler"/></svg></a><ul class="submenu"><li><a href="#d-tuinontwerp"><span class="s-ic"><svg class="i"><use href="#potlood"/></svg></span>Tuinontwerp op maat</a></li><li><a href="#d-tuinaanleg"><span class="s-ic"><svg class="i"><use href="#schop"/></svg></span>Tuinaanleg</a></li><li><a href="#d-afsluitingen"><span class="s-ic"><svg class="i"><use href="#hek"/></svg></span>Afsluitingen en omheiningen</a></li><li><a href="#d-tuinonderhoud"><span class="s-ic"><svg class="i"><use href="#schaar"/></svg></span>Tuinonderhoud</a></li><li><a href="#d-machinale-werken"><span class="s-ic"><svg class="i"><use href="#graafkraan"/></svg></span>Machinale werken</a></li><li><a class="s-alle" href="#diensten">Alle diensten bekijken <svg class="i"><use href="#pijl"/></svg></a></li></ul></li><li><a href="#over">Over Sam</a></li><li><a href="#werkwijze">Werkwijze</a></li><li><a href="#realisaties">Realisaties</a></li><li><a href="#faq">Veelgestelde vragen</a></li><li><a href="#offerte">Contact</a></li>
