@@ -283,27 +283,29 @@ body.menu-open header .ik.lijn{background:#fff;border-color:var(--rand)}
 header.vast .thema,.menu .thema{background:var(--surface);border-color:var(--rand)}
 header.vast .thema button,.menu .thema button{color:var(--muted)}
 .menu li.thema{display:none}
-@media (max-width:1180px){.nav-r .thema{display:none}.menu.open>li.thema{display:inline-flex;margin:14px 20px 4px;align-self:flex-start}}
-/* donkere versie, zoals de huidige site */
-html[data-thema="donker"]{--bg:#0D0D0D;--kaart:#191919;--surface:#141414;--rand:#2C2C2C;--tekst:#EEE7DF;--muted:#A9A097;--ink:#060606;--diep:#000;--koper:#B26C38;--koper-d:#94562A;--koper-t:#2A1C12;--sch:0 1px 2px rgba(0,0,0,.4),0 12px 32px -16px rgba(0,0,0,.8);color-scheme:dark}
-html[data-thema="donker"] body{background:var(--bg)}
-html[data-thema="donker"] header.vast,html[data-thema="donker"] body.menu-open header,html[data-thema="donker"] .menu.open{background:var(--bg)}
-html[data-thema="donker"] header.vast{box-shadow:0 1px 0 var(--rand),0 10px 30px -20px rgba(0,0,0,.8)}
-html[data-thema="donker"] header.vast .ik.lijn,html[data-thema="donker"] body.menu-open header .ik.lijn{background:var(--kaart);border-color:var(--rand)}
-html[data-thema="donker"] header.vast .logo,html[data-thema="donker"] body.menu-open header .logo{background:transparent;padding-left:0}
-html[data-thema="donker"] .kaart,html[data-thema="donker"] .faq-item,html[data-thema="donker"] .stap,html[data-thema="donker"] .form,html[data-thema="donker"] .ck,html[data-thema="donker"] .mob-balk{background:var(--kaart)}
-html[data-thema="donker"] .veld input,html[data-thema="donker"] .veld select,html[data-thema="donker"] .veld textarea{background:#111;border-color:var(--rand)}
-html[data-thema="donker"] .veld input::placeholder,html[data-thema="donker"] .veld textarea::placeholder{color:#6E6862}
-html[data-thema="donker"] .eyebrow{color:#E2B48D}
-html[data-thema="donker"] .af{border:1px solid var(--rand);border-left:4px solid var(--koper)}
-html[data-thema="donker"] .feiten{border-top-color:var(--rand)}
-html[data-thema="donker"] .nr{border-color:#3A2817}
-html[data-thema="donker"] .faq-item.open{border-color:#5A3C24}
-html[data-thema="donker"] .form-ok{color:#E2B48D}
-html[data-thema="donker"] .proj img{background:#1A1A1A}
-html[data-thema="donker"] .diensten,html[data-thema="donker"] .quote,html[data-thema="donker"] .spec{border-top:1px solid #1E1E1E;border-bottom:1px solid #1E1E1E}
-html[data-thema="donker"] .ck-knop{border-color:var(--bg)}
+@media (max-width:640px){.thema button{width:30px;height:30px}.nav-r .thema{padding:2px}}
+@media (max-width:460px){.nav-r .thema{display:none}.menu.open>li.thema{display:inline-flex;margin:14px 20px 4px;align-self:flex-start}}
+/* donkere versie, zoals de huidige site: zwarte header, donkere blokken en footer, inhoud blijft licht */
+html[data-thema="donker"]{--ink:#0D0D0D;--diep:#000}
+html[data-thema="donker"] header.vast,html[data-thema="donker"] body.menu-open header{background:#0D0D0D;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+html[data-thema="donker"] header.vast .menu>li>a{color:#fff}
+html[data-thema="donker"] header.vast .menu>li>a.actief,html[data-thema="donker"] header.vast .menu>li>a:hover{color:#E2B48D}
+html[data-thema="donker"] header.vast .logo,html[data-thema="donker"] body.menu-open header .logo{background:transparent}
+html[data-thema="donker"] header.vast .ik.lijn,html[data-thema="donker"] body.menu-open header .ik.lijn{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25)}
+html[data-thema="donker"] header.vast #hamburger span,html[data-thema="donker"] body.menu-open header #hamburger span{background:#fff}
+html[data-thema="donker"] header.vast .thema{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25)}
+html[data-thema="donker"] header.vast .thema button{color:rgba(255,255,255,.85)}
 html[data-thema="donker"] .thema button.aan{background:var(--koper);color:#fff}
+html[data-thema="donker"] main section:not(.hero):not(.diensten):not(.quote) h2{color:var(--koper)}
+html[data-thema="donker"] .mob-balk{background:#0D0D0D;border-top-color:#222}
+html[data-thema="donker"] .mob-balk a{color:#fff}
+@media (max-width:1180px){
+  html[data-thema="donker"] .menu.open{background:#0D0D0D}
+  html[data-thema="donker"] header .menu.open>li>a{color:#fff;border-bottom-color:#222}
+  html[data-thema="donker"] header .menu.open>li>a.actief{color:#E2B48D}
+  html[data-thema="donker"] .menu .thema{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25)}
+  html[data-thema="donker"] .menu .thema button{color:rgba(255,255,255,.85)}
+}
 </style>
 <script>(function(){var t=null;try{var q=new URLSearchParams(location.search).get('thema');if(q==='donker'||q==='licht'){t=q;localStorage.setItem('hg-thema',q)}else{t=localStorage.getItem('hg-thema')}}catch(e){}if(t==='donker')document.documentElement.setAttribute('data-thema','donker')})()</script>
 </head>
