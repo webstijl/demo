@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
-<head>
+<head><script>try{if(localStorage.getItem("ew-modus")==="licht")document.documentElement.classList.add("licht")}catch(e){}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
@@ -257,7 +257,7 @@ p{color:var(--muted)}
 .k-acc{background:var(--acc);color:var(--ink)}.k-acc:hover{background:var(--acc-l)}
 .k-lijn,.k-lijn-w{border-color:rgba(255,255,255,.3);color:#fff;background:transparent}.k-lijn:hover,.k-lijn-w:hover{border-color:var(--acc);color:var(--acc);background:transparent}
 /* header */
-header{background:rgba(12,23,41,.96);border-bottom:2px solid var(--acc);backdrop-filter:blur(8px)}
+header{background:var(--ink);border-bottom:2px solid var(--acc)}
 .menu>li>a{color:#fff;text-transform:none;letter-spacing:0;font-family:var(--fb);font-weight:600;font-size:.95rem;white-space:nowrap}
 .menu>li>a:hover,.menu>li>a.actief{color:var(--acc)}
 .logo{background:none;padding:0}.logo img{height:52px;filter:brightness(0) invert(1)}
@@ -330,6 +330,50 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 .ck{background:var(--surface);border-color:var(--rand)}.ck b{color:#fff}.ck-ic{background:var(--acc-t);color:var(--acc)}
 .ck button{background:var(--acc);color:var(--ink)}.ck-knop{background:var(--acc);color:var(--ink);border-color:var(--ink)}
 .mob-balk{background:var(--ink);border-color:var(--rand)}.mob-balk a{color:#fff}.mob-balk svg.i{color:var(--acc)}.mob-balk a.hoofd{background:var(--acc);color:var(--ink)}.mob-balk a.hoofd svg.i{color:var(--ink)}
+
+/* schakelaar licht/donker */
+.modus{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;transition:.2s}
+.modus:hover{border-color:var(--acc);color:var(--acc)}
+.modus svg.i{width:19px;height:19px}.modus .maan{display:none}
+.m-modus{display:none}
+.t-donker{display:none}
+@media (max-width:1180px){.menu.open .m-modus{display:block}.menu.open .m-modus a{color:var(--acc)!important}}
+/* ===== lichte versie ===== */
+html.licht body{background:#F5F3EE;color:var(--nacht)}
+html.licht h1,html.licht h2,html.licht h3,html.licht h4{color:var(--nacht)}
+html.licht p,html.licht .kop .lead,html.licht .diensten .kop .lead{color:#5B6170}
+html.licht .ew-hero .eyebrow{color:var(--acc)}
+html.licht .bg-s,html.licht .diensten{background:#ECE8E0}
+html.licht section{background-color:transparent}
+html.licht .eyebrow{color:var(--acc-d)}
+html.licht header{background:#fff;border-bottom-color:var(--acc)}
+html.licht .menu>li>a{color:var(--nacht)}html.licht .menu>li>a:hover,html.licht .menu>li>a.actief{color:var(--acc-d)}
+html.licht .logo img,html.licht .f-logo img{filter:none}
+html.licht .modus{color:var(--nacht);border-color:#DCD6CA}html.licht .modus .zon{display:none}html.licht .modus .maan{display:block}
+html.licht .t-licht{display:none}html.licht .t-donker{display:inline}
+html.licht .ik.lijn{border-color:#DCD6CA}html.licht #hamburger span{background:var(--nacht)}
+html.licht .submenu{background:#fff;border-color:#E2DDD2}html.licht .submenu a{color:var(--nacht)!important}html.licht .submenu a:hover{background:#F5F3EE}
+html.licht .menu.open{background:#fff}html.licht .menu.open>li>a{color:var(--nacht);border-color:#E2DDD2}html.licht .menu.open .submenu{background:#F5F3EE}
+html.licht .k-lijn,html.licht .k-lijn-w{border-color:var(--nacht);color:var(--nacht)}html.licht .k-lijn:hover{background:var(--nacht);color:#fff;border-color:var(--nacht)}
+html.licht .ew-hero .k-lijn{border-color:rgba(255,255,255,.4);color:#fff}
+html.licht .ew-hero h1,html.licht .ew-hero .ew-feiten b{color:#fff}html.licht .ew-hero p{color:rgba(255,255,255,.8)}
+html.licht .af{background:#fff}html.licht .af h3,html.licht .feiten b{color:var(--nacht)}html.licht .af p,html.licht .feiten span{color:#5B6170}html.licht .feiten{border-color:#E2DDD2}
+html.licht .who-foto img{border-color:#E2DDD2}
+html.licht .mat h3{color:#fff}
+html.licht .ew-d{background:#fff;border-color:#E2DDD2}html.licht .ew-d h3{color:var(--nacht)}html.licht .ew-d li{color:#5B6170}html.licht .ew-d .lees,html.licht .ew-d .nrtje{color:var(--acc-d)}
+html.licht .ew-d:hover{border-color:var(--acc)}
+html.licht .citaat{background:var(--nacht);border-color:transparent}html.licht .citaat blockquote{color:#fff}html.licht .citaat cite{color:rgba(255,255,255,.65)}
+html.licht .stap::before{background:#E2DDD2}html.licht .nr{color:var(--acc-d);border-color:var(--acc)}
+html.licht .kaart,html.licht .faq-item{background:#fff;border-color:#E2DDD2}html.licht .kaart b,html.licht .faq-v{color:var(--nacht)}
+html.licht .proj img{background:#E6E1D6}
+html.licht .quote{background:var(--nacht);border-color:transparent}html.licht .quote h2{color:#fff}html.licht .quote p{color:rgba(255,255,255,.75)}
+html.licht .quote .k-lijn-w{border-color:rgba(255,255,255,.35);color:#fff}
+html.licht .form{background:#fff;border-color:#E2DDD2}html.licht .veld label{color:var(--nacht)}
+html.licht .veld input,html.licht .veld select,html.licht .veld textarea{background:#fff;border-color:#E2DDD2;color:var(--nacht)}
+html.licht .veld input::placeholder,html.licht .veld textarea::placeholder{color:#9A9DA6}
+html.licht .form .k-lijn{border-color:var(--nacht);color:var(--nacht)}html.licht .form-noot{color:#5B6170}
+html.licht .ck{background:#fff;border-color:#E2DDD2}html.licht .ck b{color:var(--nacht)}
+html.licht .mob-balk{background:#fff;border-color:#E2DDD2}html.licht .mob-balk a{color:var(--nacht)}
 @media (max-width:1180px){.ew-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:1024px){.materiaal{grid-template-columns:1fr}}
 @media (max-width:760px){.proj{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}
@@ -379,9 +423,10 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
   <div class="wrap nav">
     <a href="#" class="logo"><img src="https://a6e9c82249.clvaw-cdnwnd.com/40a1aa76f353af08087e45591aab0ef3/200000226-6b76d6b76f/LOGO_DEF_TRANSPARANT.png?ph=a6e9c82249" alt="EagleWorks" width="200" height="70"></a>
     <ul class="menu" id="menu">
-      <li><a href="" class="actief">Home</a></li><li class="sub"><a href="#diensten">Diensten <svg class="i"><use href="#pijler"/></svg></a><ul class="submenu"><li><a href="#d-meubelmakerij"><span class="s-ic"><svg class="i"><use href="#bureau"/></svg></span>Meubelmakerij</a></li><li><a href="#d-kasten-dressings"><span class="s-ic"><svg class="i"><use href="#kast"/></svg></span>Kasten en dressings</a></li><li><a href="#d-interieurafwerking"><span class="s-ic"><svg class="i"><use href="#huis"/></svg></span>Interieurafwerking</a></li><li><a href="#d-deuren-trappen"><span class="s-ic"><svg class="i"><use href="#dak"/></svg></span>Deuren en trappen</a></li><li><a href="#d-tuinconstructies"><span class="s-ic"><svg class="i"><use href="#blad"/></svg></span>Tuinconstructies</a></li><li><a class="s-alle" href="#diensten">Alle diensten bekijken <svg class="i"><use href="#pijl"/></svg></a></li></ul></li><li><a href="#over">Over Thijs</a></li><li><a href="#projecten">Projecten</a></li><li><a href="#faq">Veelgestelde vragen</a></li><li><a href="#offerte">Contact</a></li>
+      <li><a href="" class="actief">Home</a></li><li class="sub"><a href="#diensten">Diensten <svg class="i"><use href="#pijler"/></svg></a><ul class="submenu"><li><a href="#d-meubelmakerij"><span class="s-ic"><svg class="i"><use href="#bureau"/></svg></span>Meubelmakerij</a></li><li><a href="#d-kasten-dressings"><span class="s-ic"><svg class="i"><use href="#kast"/></svg></span>Kasten en dressings</a></li><li><a href="#d-interieurafwerking"><span class="s-ic"><svg class="i"><use href="#huis"/></svg></span>Interieurafwerking</a></li><li><a href="#d-deuren-trappen"><span class="s-ic"><svg class="i"><use href="#dak"/></svg></span>Deuren en trappen</a></li><li><a href="#d-tuinconstructies"><span class="s-ic"><svg class="i"><use href="#blad"/></svg></span>Tuinconstructies</a></li><li><a class="s-alle" href="#diensten">Alle diensten bekijken <svg class="i"><use href="#pijl"/></svg></a></li></ul></li><li><a href="#over">Over Thijs</a></li><li><a href="#projecten">Projecten</a></li><li><a href="#faq">Veelgestelde vragen</a></li><li><a href="#offerte">Contact</a></li><li class="m-modus"><a href="#" id="modus2"><span class="t-licht">Lichte versie</span><span class="t-donker">Donkere versie</span></a></li>
     </ul>
     <div class="nav-r">
+      <button class="modus" id="modus" type="button" aria-label="Wissel tussen lichte en donkere versie"><svg class="i zon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i maan" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
       <a href="#offerte" class="knop k-acc">Vraag een prijs</a>
       <a class="ik" href="tel:+32495604787" aria-label="Bel Thijs"><svg class="i"><use href="#tel"/></svg></a>
       <a class="ik" href="#offerte" aria-label="Offerte aanvragen"><svg class="i"><use href="#doc"/></svg></a>
@@ -565,6 +610,6 @@ try{ok=localStorage.getItem('ew-ck')==='1'}catch(e){}
 document.getElementById('ck-ok').onclick=function(){try{localStorage.setItem('ew-ck','1')}catch(e){}ck.classList.remove('toon');ckk.classList.add('toon')};
 ckk.onclick=function(){ckk.classList.remove('toon');ck.classList.add('toon')};
 </script>
-
+<script>function wissel(e){if(e)e.preventDefault();var l=document.documentElement.classList.toggle("licht");try{localStorage.setItem("ew-modus",l?"licht":"donker")}catch(x){}}document.getElementById("modus").onclick=wissel;document.getElementById("modus2").onclick=wissel;</script>
 </body>
 </html>
