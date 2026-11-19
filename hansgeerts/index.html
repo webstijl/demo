@@ -275,10 +275,42 @@ body.menu-open header .ik.lijn{background:#fff;border-color:var(--rand)}
 @media (max-width:760px){.stappen{grid-template-columns:1fr}.strook-los .wrap{padding:16px 10px}}
 @media (max-width:860px){.strook-los .wrap{min-height:58px}}
 @media (max-width:760px){.hero{min-height:88vh;padding:130px 0 70px}.dienst{min-height:300px}}
+/* ===== licht/donker-switch ===== */
+.thema{display:inline-flex;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:3px;gap:2px}
+.thema button{width:36px;height:32px;border:0;border-radius:50px;background:none;color:rgba(255,255,255,.85);display:grid;place-items:center;cursor:pointer;transition:.2s}
+.thema button svg.i{width:16px;height:16px}
+.thema button.aan{background:#fff;color:var(--koper);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+header.vast .thema,.menu .thema{background:var(--surface);border-color:var(--rand)}
+header.vast .thema button,.menu .thema button{color:var(--muted)}
+.menu li.thema{display:none}
+@media (max-width:1180px){.nav-r .thema{display:none}.menu.open>li.thema{display:inline-flex;margin:14px 20px 4px;align-self:flex-start}}
+/* donkere versie, zoals de huidige site */
+html[data-thema="donker"]{--bg:#0D0D0D;--kaart:#191919;--surface:#141414;--rand:#2C2C2C;--tekst:#EEE7DF;--muted:#A9A097;--ink:#060606;--diep:#000;--koper:#B26C38;--koper-d:#94562A;--koper-t:#2A1C12;--sch:0 1px 2px rgba(0,0,0,.4),0 12px 32px -16px rgba(0,0,0,.8);color-scheme:dark}
+html[data-thema="donker"] body{background:var(--bg)}
+html[data-thema="donker"] header.vast,html[data-thema="donker"] body.menu-open header,html[data-thema="donker"] .menu.open{background:var(--bg)}
+html[data-thema="donker"] header.vast{box-shadow:0 1px 0 var(--rand),0 10px 30px -20px rgba(0,0,0,.8)}
+html[data-thema="donker"] header.vast .ik.lijn,html[data-thema="donker"] body.menu-open header .ik.lijn{background:var(--kaart);border-color:var(--rand)}
+html[data-thema="donker"] header.vast .logo,html[data-thema="donker"] body.menu-open header .logo{background:transparent;padding-left:0}
+html[data-thema="donker"] .kaart,html[data-thema="donker"] .faq-item,html[data-thema="donker"] .stap,html[data-thema="donker"] .form,html[data-thema="donker"] .ck,html[data-thema="donker"] .mob-balk{background:var(--kaart)}
+html[data-thema="donker"] .veld input,html[data-thema="donker"] .veld select,html[data-thema="donker"] .veld textarea{background:#111;border-color:var(--rand)}
+html[data-thema="donker"] .veld input::placeholder,html[data-thema="donker"] .veld textarea::placeholder{color:#6E6862}
+html[data-thema="donker"] .eyebrow{color:#E2B48D}
+html[data-thema="donker"] .af{border:1px solid var(--rand);border-left:4px solid var(--koper)}
+html[data-thema="donker"] .feiten{border-top-color:var(--rand)}
+html[data-thema="donker"] .nr{border-color:#3A2817}
+html[data-thema="donker"] .faq-item.open{border-color:#5A3C24}
+html[data-thema="donker"] .form-ok{color:#E2B48D}
+html[data-thema="donker"] .proj img{background:#1A1A1A}
+html[data-thema="donker"] .diensten,html[data-thema="donker"] .quote,html[data-thema="donker"] .spec{border-top:1px solid #1E1E1E;border-bottom:1px solid #1E1E1E}
+html[data-thema="donker"] .ck-knop{border-color:var(--bg)}
+html[data-thema="donker"] .thema button.aan{background:var(--koper);color:#fff}
 </style>
+<script>(function(){var t=null;try{var q=new URLSearchParams(location.search).get('thema');if(q==='donker'||q==='licht'){t=q;localStorage.setItem('hg-thema',q)}else{t=localStorage.getItem('hg-thema')}}catch(e){}if(t==='donker')document.documentElement.setAttribute('data-thema','donker')})()</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="zon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+<symbol id="maan" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
 <symbol id="tel" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
 <symbol id="mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
 <symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
@@ -308,8 +340,10 @@ body.menu-open header .ik.lijn{background:#fff;border-color:var(--rand)}
       <li><a href="#realisaties">Realisaties</a></li>
       <li><a href="#faq">Veelgestelde vragen</a></li>
       <li><a href="#offerte">Contact</a></li>
+      <li class="thema"><button type="button" data-t="licht" aria-label="Lichte versie" title="Lichte versie"><svg class="i"><use href="#zon"/></svg></button><button type="button" data-t="donker" aria-label="Donkere versie" title="Donkere versie"><svg class="i"><use href="#maan"/></svg></button></li>
     </ul>
     <div class="nav-r">
+      <div class="thema"><button type="button" data-t="licht" aria-label="Lichte versie" title="Lichte versie"><svg class="i"><use href="#zon"/></svg></button><button type="button" data-t="donker" aria-label="Donkere versie" title="Donkere versie"><svg class="i"><use href="#maan"/></svg></button></div>
       <a href="#offerte" class="knop k-koper">Gratis offerte</a>
       <a class="ik" href="tel:+32473790924" aria-label="Bel Hans Geerts"><svg class="i"><use href="#tel"/></svg></a>
       <a class="ik" href="#offerte" aria-label="Offerte aanvragen"><svg class="i"><use href="#doc"/></svg></a>
@@ -561,6 +595,10 @@ try{ok=localStorage.getItem('hg-ck')==='1'}catch(e){}
 (ok?ckk:ck).classList.add('toon');
 document.getElementById('ck-ok').onclick=function(){try{localStorage.setItem('hg-ck','1')}catch(e){}ck.classList.remove('toon');ckk.classList.add('toon')};
 ckk.onclick=function(){ckk.classList.remove('toon');ck.classList.add('toon')};
+var html=document.documentElement,tk=[].slice.call(document.querySelectorAll('.thema button'));
+function zetThema(t){if(t==='donker')html.setAttribute('data-thema','donker');else html.removeAttribute('data-thema');tk.forEach(function(b){var a=b.getAttribute('data-t')===t;b.classList.toggle('aan',a);b.setAttribute('aria-pressed',a)});try{localStorage.setItem('hg-thema',t)}catch(e){}}
+zetThema(html.getAttribute('data-thema')==='donker'?'donker':'licht');
+tk.forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();zetThema(b.getAttribute('data-t'))})});
 </script>
 </body>
 </html>
