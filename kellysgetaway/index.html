@@ -14,7 +14,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BarOrPub", "name": "Kelly’s Getaway", "url": "https://kellysgetaway.be/", "telephone": "+32496123290", "email": "kelly.neskens@gmail.com", "servesCuisine": "Café", "openingHours": "Mo-Su 12:00-", "address": {"@type": "PostalAddress", "streetAddress": "Gestelstraat 34", "postalCode": "3560", "addressLocality": "Lummen", "addressCountry": "BE"}, "sameAs": ["https://www.facebook.com/profile.php?id=100057365173740"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Zijn jullie elke dag open?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, Kelly’s Getaway is 7 dagen op 7 open vanaf 12 uur ’s middags. In de zomer zijn we op zondag al open vanaf 10 uur."}}, {"@type": "Question", "name": "Hebben jullie parking voor moto’s en fietsen?", "acceptedAnswer": {"@type": "Answer", "text": "Absoluut. Er is een ruime parking met een aparte motozone en voldoende plaats voor fietsen."}}, {"@type": "Question", "name": "Kan ik reserveren voor een groep?", "acceptedAnswer": {"@type": "Answer", "text": "Voor groepen is reserveren mogelijk. Bel even naar 0496 123 290, stuur een mail naar kelly.neskens@gmail.com of vul het formulier in."}}, {"@type": "Question", "name": "Welke dranken serveren jullie?", "acceptedAnswer": {"@type": "Answer", "text": "Alles wat je van een café mag verwachten: frisdrank, limonade, koffie, thee en wijn. Daarbovenop meer dan 300 bieren, 21 alcoholvrije bieren en unieke dranken zoals moonshine en mede."}}, {"@type": "Question", "name": "Serveren jullie ook eten?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, we bieden vers, zelfgemaakt eten aan. Ideaal bij een drankje of tijdens een tussenstop."}}, {"@type": "Question", "name": "Waar ligt Kelly’s Getaway?", "acceptedAnswer": {"@type": "Answer", "text": "Aan de Gestelstraat 34 in Lummen, midden in de fietsroutes van Limburg. Vlot bereikbaar vanuit Hasselt, Herk-de-Stad, Heusden-Zolder en Diest."}}]}</script>
 <style>
-:root{--acc:#E8A33D;--acc-d:#C9851F;--acc-t:rgba(232,163,61,.12);--acc-l:#F2BE6A;--acc-b:rgba(232,163,61,.35);--acc-sh:rgba(232,163,61,.35);--acc-ring:rgba(232,163,61,.2);--creme:#F3EBDD;--paneel:#1E1916;--ink:#0D0B0A;--diep:#0A0908;--surface:#171311;--rand:#342B25;--tekst:#E4DACA;--muted:#A89B88;--sch:0 20px 40px -24px rgba(0,0,0,.8);--r:4px;--r-sub:4px;--fh:'Staatliches',sans-serif;--hand:'Permanent Marker',cursive;--fb:'Inter',sans-serif}
+:root{--acc:#E8A33D;--acc-d:#C9851F;--acc-t:rgba(232,163,61,.12);--acc-l:#F2BE6A;--acc-b:rgba(232,163,61,.35);--acc-sh:rgba(232,163,61,.35);--acc-ring:rgba(232,163,61,.2);--creme:#F3EBDD;--paneel:#1E1916;--ink:#0D0B0A;--diep:#0A0908;--surface:#171311;--rand:#342B25;--tekst:#E4DACA;--muted:#BCAF9B;--sch:0 20px 40px -24px rgba(0,0,0,.8);--r:4px;--r-sub:4px;--fh:'Staatliches',sans-serif;--hand:'Permanent Marker',cursive;--fb:'Inter',sans-serif}
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:110px;overflow-x:hidden}
@@ -476,6 +476,33 @@ html.licht .kg-hero,html.licht .quote,html.licht footer,html.licht .kg-d.foto,ht
 html.licht .quote .form{--creme:#1C1612;--tekst:#3A2F26;--muted:#76685A;--rand:#E2D4BE;--paneel:#FFFFFF;--surface:#F7F0E4}
 html.licht .ck{box-shadow:var(--sch)}
 html.licht .kop .krabbel,html.licht .eyebrow{color:#B7761A}html.licht .eyebrow::before{background:#B7761A}html.licht .kg-hero .eyebrow,html.licht .quote .eyebrow{color:var(--acc)}html.licht .uren li.vandaag{color:#A86A12}
+
+/* ===== leesbaarheid ===== */
+.kg-d p,.kg-d.foto p{font-size:1rem}
+.kg-feiten span{font-size:.95rem}
+.route-tags em{font-size:.85rem}
+.vandaag-kaart li{font-size:.95rem}
+.faq-a p{font-size:1rem}
+@media (max-width:1180px){
+ .menu.open>li>a{font-family:var(--fh);font-size:1.75rem!important;letter-spacing:.05em;padding:14px 22px!important;text-transform:uppercase}
+ .menu.open .submenu a{font-size:1.08rem!important;padding:12px 22px!important}
+ .menu.open .m-modus a{font-size:1.4rem!important}
+}
+@media (max-width:760px){
+ body{font-size:17px}
+ p,.lead,.sub-t{font-size:1.06rem!important;line-height:1.65}
+ .eyebrow{font-size:.85rem;letter-spacing:.14em}
+ .topbar{font-size:.88rem!important}
+ .mob-balk a{font-size:.8rem}
+ .kg-d h3{font-size:1.7rem}.kg-d.tekst h3{font-size:1.9rem}
+ .uren li{font-size:1.05rem}
+ .huisregels li{font-size:1.2rem}.bord li{font-size:1.3rem}.bord li em{font-size:1.1rem}
+ .genres span{font-size:1.45rem}
+ .faq-v{font-size:1.05rem}
+ .veld label{font-size:.95rem}.veld input,.veld select,.veld textarea{font-size:1rem}
+ .kg-feiten span{font-size:.92rem}
+ .f-grid li a,.f-c a,.f-c span{font-size:1rem}
+}
 @media (max-width:1360px){.tb>.tb-x{display:none}}
 @media (max-width:1180px){.nav{height:100px}.logo img{width:calc(100vw - 190px);max-width:340px;height:auto;max-height:none}.topbar{display:block;font-size:.8rem}.kg-grid{grid-template-columns:1fr 1fr}.kg-info{grid-template-columns:1fr}}
 @media (max-width:1024px){.kg-muziek{grid-template-columns:1fr}.kg-hero{min-height:0}}
