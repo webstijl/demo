@@ -257,7 +257,8 @@ p,.lead{color:var(--muted)}
 .k-acc{background:var(--acc);color:var(--ink)}.k-acc:hover{background:var(--acc-l);color:var(--ink)}
 .k-lijn,.k-lijn-w{border-color:var(--rand);color:var(--creme);background:transparent}.k-lijn:hover,.k-lijn-w:hover{border-color:var(--acc);background:var(--acc);color:var(--ink)}
 header{background:var(--ink);box-shadow:0 1px 0 var(--rand)}
-.logo{background:none;padding:0}.logo img{height:52px;width:auto}
+.logo{background:none;padding:0;flex-shrink:0}.logo img{height:52px;width:auto;max-width:none}
+@media (min-width:1181px) and (max-width:1480px){.menu>li:nth-child(5){display:none}.menu>li>a{padding:8px 10px}}
 .menu>li>a{color:var(--creme);font-family:var(--fh);font-weight:400;font-size:1.12rem;letter-spacing:.06em;white-space:nowrap}
 .menu>li>a:hover,.menu>li>a.actief{color:var(--acc)}
 .submenu{background:var(--paneel)!important;border-color:var(--rand)!important}.submenu a{color:var(--tekst)!important}.submenu a:hover{background:rgba(255,255,255,.04)!important}
@@ -327,11 +328,61 @@ section{background:transparent}
 footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:var(--acc)}
 .f-logo{background:none!important;padding:0!important}.f-logo img{height:56px;width:auto}
 .chips a{background:var(--paneel);border-color:var(--rand);color:var(--tekst)}
+
+/* header-widgets horeca */
+.open-badge{display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border:1px solid var(--rand);border-radius:4px;color:var(--creme);font-weight:600;font-size:.88rem;white-space:nowrap}
+.open-badge .dot{width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px var(--acc-ring)}
+.open-badge.is-open{border-color:rgba(76,200,120,.4)}
+.open-badge.is-open .dot{background:#4CC878;box-shadow:0 0 0 0 rgba(76,200,120,.6);animation:puls 2s infinite}
+@keyframes puls{0%{box-shadow:0 0 0 0 rgba(76,200,120,.55)}70%{box-shadow:0 0 0 9px rgba(76,200,120,0)}100%{box-shadow:0 0 0 0 rgba(76,200,120,0)}}
+.nav-route{display:inline-flex;gap:8px;align-items:center;padding:10px 18px}.nav-route svg.i{width:16px;height:16px}
+.ik-route{display:none}
+@media (max-width:1180px){.nav-r .nav-route{display:none}.ik-route{display:grid}.open-badge{padding:8px 10px;font-size:.8rem}}
+@media (max-width:520px){.open-badge .ob-t{display:none}.open-badge{width:44px;height:44px;justify-content:center;padding:0}}
+/* vandaag-kaart in hero */
+.kg-hero .wrap.hero-in{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:end}
+.vandaag{background:rgba(20,17,16,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--rand);border-radius:4px;padding:22px}
+.vandaag .open-badge{border:0;padding:0;font-size:1rem}
+.vandaag h3{margin-top:14px;font-size:1.6rem}
+.vandaag ul{list-style:none;margin-top:12px;display:grid;gap:8px}
+.vandaag li{display:flex;gap:10px;align-items:center;font-size:.9rem;color:#D3C8B6}
+.vandaag li svg.i{width:16px;height:16px;color:var(--acc);flex-shrink:0}
+.vandaag .knop{width:100%;justify-content:center;margin-top:16px}
+/* openingsuren + kaart */
+.kg-info2{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px;margin-top:40px}
+.uren{list-style:none;margin-top:14px}
+.uren li{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed var(--rand);color:var(--tekst)}
+.uren li:last-child{border:0}
+.uren li.vandaag{color:var(--acc);font-weight:700}
+.uren li.vandaag span:first-child::after{content:"  · vandaag";font-weight:500;font-size:.8rem}
+.info-kol{display:grid;gap:16px;align-content:start}
+.info-kol .kaart h3{display:flex;gap:10px;align-items:center;font-size:1.6rem}
+.info-kol .kaart h3 svg.i{color:var(--acc);width:22px;height:22px}
+.info-kol .kaart .open-badge{margin-top:12px}
+.contact-rij{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.kaartblok{position:relative;border:1px solid var(--rand);border-radius:4px;overflow:hidden;min-height:460px;background:var(--paneel)}
+.kaartblok iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.9) hue-rotate(180deg)}
+.kaartblok .route-kaart{position:absolute;left:16px;right:16px;bottom:16px;background:var(--ink);border:1px solid var(--rand);border-radius:4px;padding:18px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.route-kaart b{display:block;font-family:var(--fh);font-weight:400;font-size:1.4rem;color:var(--creme)}
+.route-kaart span{font-size:.88rem;color:var(--muted)}
+.route-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.route-tags em{font-style:normal;font-size:.78rem;border:1px solid var(--rand);border-radius:4px;padding:3px 8px;color:var(--tekst)}
+/* reviews */
+.rv{display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;background:var(--paneel);border:1px solid var(--rand);border-radius:4px;padding:34px 36px}
+.rv-g{width:64px;height:64px;border-radius:4px;background:#fff;display:grid;place-items:center}
+.rv-g svg{width:34px;height:34px}
+.rv-sterren{display:flex;gap:4px;color:var(--acc);font-size:1.3rem;letter-spacing:2px}
+.rv h2{font-size:clamp(1.8rem,3vw,2.4rem)}
+.rv p{margin-top:6px}
+.rv .knoppen{margin:0}
+@media (max-width:1024px){.kg-hero .wrap.hero-in{grid-template-columns:1fr}.vandaag{max-width:420px}.kg-info2{grid-template-columns:1fr}.rv{grid-template-columns:1fr;gap:18px}}
+@media (max-width:640px){.vandaag{display:none}.kaartblok{min-height:420px}.rv{padding:26px 20px}}
 @media (max-width:1360px){.tb>.tb-x{display:none}}
 @media (max-width:1180px){.topbar{display:block;font-size:.8rem}.kg-grid{grid-template-columns:1fr 1fr}.kg-info{grid-template-columns:1fr}}
 @media (max-width:1024px){.kg-muziek{grid-template-columns:1fr}.kg-hero{min-height:0}}
 @media (max-width:760px){.tb-x{display:none!important}}
 @media (max-width:640px){.kg-hero{padding:120px 0 48px;min-height:calc(100svh - 108px)}.kg-hero .knoppen .knop{flex:1 1 100%}.kg-grid{grid-template-columns:1fr}.kg-d.foto{min-height:320px}.kg-feiten div{padding:14px 18px 0 0;margin-right:18px}.kg-feiten b{font-size:1.8rem}.logo img{height:40px}}
+@media (max-width:400px){.logo img{height:32px}}
 
 </style>
 </head>
@@ -378,6 +429,7 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 <symbol id="sleutel" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2.1 2.1 0 0 1-3-3z"/><path d="m14.7 6.3 3-3 3 3-3 3"/></symbol>
 <symbol id="trap" viewBox="0 0 24 24"><path d="M3 21h4v-4h4v-4h4V9h4V5h2"/></symbol>
 <symbol id="klok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="route" viewBox="0 0 24 24"><path d="M3 11 21 3l-8 18-2-8z"/></symbol>
 </svg>
 
 <header id="header">
@@ -388,16 +440,15 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
     </ul>
     <div class="nav-r">
       
-      <a href="#offerte" class="knop k-acc">Reserveer</a>
-      <a class="ik" href="tel:+32496123290" aria-label="Bel Kelly"><svg class="i"><use href="#tel"/></svg></a>
-      <a class="ik" href="#offerte" aria-label="Offerte aanvragen"><svg class="i"><use href="#doc"/></svg></a>
+      <a href="#info" class="open-badge" data-open><span class="dot"></span><span class="ob-t">Open vanaf 12u</span></a><a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" class="knop k-acc nav-route"><svg class="i"><use href="#route"/></svg>Route</a><a class="ik ik-route" href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" aria-label="Route"><svg class="i"><use href="#route"/></svg></a>
       <button class="ik lijn" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 <main>
 <section class="kg-hero">
-  <div class="wrap">
+  <div class="wrap hero-in">
+   <div>
     <span class="eyebrow">Rockcafé · Biker bar · Fietscafé in Lummen</span>
     <h1>Rock, bier en <span>pure sfeer</span> in het hart van Limburg</h1>
     <p class="sub-t">Meer dan 300 bieren, moonshine en mede, live muziek en een rockshop. Kelly’s Getaway is een vaste stop voor motards, fietsers en muziekliefhebbers.</p>
@@ -406,6 +457,13 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
       <a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" class="knop k-lijn-w"><svg class="i"><use href="#pin"/></svg>Route naar Lummen</a>
     </div>
     <div class="kg-feiten"><div><b>300+</b><span>bieren op fles</span></div><div><b>10</b><span>wisselend op tap</span></div><div><b>21</b><span>alcoholvrije bieren</span></div><div><b>7/7</b><span>open vanaf 12u</span></div></div>
+   </div>
+   <aside class="vandaag">
+    <span class="open-badge" data-open><span class="dot"></span><span class="ob-t">Open vanaf 12u</span></span>
+    <h3 data-vandaag>Vandaag: vanaf 12u</h3>
+    <ul><li><svg class="i"><use href="#pin"/></svg>Gestelstraat 34, Lummen</li><li><svg class="i"><use href="#check"/></svg>Terras en grote motozone</li><li><svg class="i"><use href="#check"/></svg>Vers, zelfgemaakt eten</li></ul>
+    <a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" class="knop k-acc"><svg class="i"><use href="#route"/></svg>Route plannen</a>
+   </aside>
   </div>
 </section>
 <div class="strook"><div class="wrap" id="strook"><span class="aan"><svg class="i"><use href="#ster"/></svg>300+ bieren op fles</span><span><svg class="i"><use href="#glans"/></svg>10 op tap, 21 alcoholvrij</span><span><svg class="i"><use href="#praat"/></svg>Live rock, blues, punk en metal</span><span><svg class="i"><use href="#pin"/></svg>Grote parking met motozone</span></div></div>
@@ -447,11 +505,30 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 
 <section class="bg-s" id="info">
   <div class="wrap">
-    <div class="kop"><span class="eyebrow">Praktisch</span><h2>Kom eens langs</h2></div>
-    <div class="kg-info" style="margin-top:40px">
-      <div class="kaart"><h3><svg class="i"><use href="#klok"/></svg>Openingsuren</h3><p><b>Elke dag</b> vanaf 12u</p><p><b>Zomer:</b> zondag vanaf 10u</p></div>
-      <div class="kaart"><h3><svg class="i"><use href="#pin"/></svg>Adres</h3><p><b>Gestelstraat 34</b><br>3560 Lummen</p><a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" class="knop k-lijn">Route plannen <svg class="i"><use href="#pijl"/></svg></a></div>
-      <div class="kaart"><h3><svg class="i"><use href="#tel"/></svg>Contact</h3><p><a href="tel:+32496123290"><b>0496 123 290</b></a><br><a href="mailto:kelly.neskens@gmail.com">kelly.neskens@gmail.com</a></p><a href="tel:+32496123290" class="knop k-acc">Bel Kelly <svg class="i"><use href="#pijl"/></svg></a></div>
+    <div class="kop"><span class="eyebrow">Openingsuren en route</span><h2>Kom eens langs</h2><p class="lead">Pal in de fietsroutes van Limburg, met een grote parking en een aparte motozone.</p></div>
+    <div class="kg-info2">
+      <div class="info-kol">
+        <div class="kaart"><h3><svg class="i"><use href="#klok"/></svg>Openingsuren</h3>
+          <span class="open-badge" data-open><span class="dot"></span><span class="ob-t">Open vanaf 12u</span></span>
+          <ul class="uren"><li data-d="ma"><span>Maandag</span><span>vanaf 12u</span></li><li data-d="di"><span>Dinsdag</span><span>vanaf 12u</span></li><li data-d="wo"><span>Woensdag</span><span>vanaf 12u</span></li><li data-d="do"><span>Donderdag</span><span>vanaf 12u</span></li><li data-d="vr"><span>Vrijdag</span><span>vanaf 12u</span></li><li data-d="za"><span>Zaterdag</span><span>vanaf 12u</span></li><li data-d="zo"><span>Zondag</span><span>vanaf 12u · zomer 10u</span></li></ul>
+        </div>
+        <div class="kaart"><h3><svg class="i"><use href="#tel"/></svg>Contact</h3><p>Groep of vraag? Kelly helpt je graag verder.</p>
+          <div class="contact-rij"><a href="tel:+32496123290" class="knop k-acc"><svg class="i"><use href="#tel"/></svg>0496 123 290</a><a href="mailto:kelly.neskens@gmail.com" class="knop k-lijn"><svg class="i"><use href="#mail"/></svg>Mail Kelly</a></div></div>
+      </div>
+      <div class="kaartblok">
+        <iframe src="https://www.google.com/maps?q=Gestelstraat+34,+3560+Lummen&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kaart Kelly’s Getaway Lummen"></iframe>
+        <div class="route-kaart"><div><b>Gestelstraat 34, Lummen</b><span>Vlot bereikbaar vanuit Hasselt, Herk-de-Stad en Heusden-Zolder</span><div class="route-tags"><em>Motozone</em><em>Fietsenstalling</em><em>Terras</em></div></div><a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" class="knop k-acc"><svg class="i"><use href="#route"/></svg>Route</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="rv">
+      <span class="rv-g"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg></span>
+      <div><div class="rv-sterren">★★★★★</div><h2>Wat bezoekers over Kelly zeggen</h2><p>Op de echte website verschijnen hier automatisch de Google-reviews van Kelly’s Getaway, met score en aantal beoordelingen.</p></div>
+      <div class="knoppen"><a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Lummen" target="_blank" rel="noopener" class="knop k-acc">Lees de reviews <svg class="i"><use href="#pijl"/></svg></a></div>
     </div>
   </div>
 </section>
@@ -530,9 +607,7 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 <button class="ck-knop" id="ck-knop" aria-label="Cookie-instellingen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#cookie"/></svg></button>
 
 <nav class="mob-balk">
-  <a href="tel:+32496123290"><svg class="i"><use href="#tel"/></svg>Bel</a>
-  <a href="mailto:kelly.neskens@gmail.com"><svg class="i"><use href="#mail"/></svg>Mail</a>
-  <a href="#offerte" class="hoofd"><svg class="i"><use href="#kalender"/></svg>Reserveer</a>
+  <a href="tel:+32496123290"><svg class="i"><use href="#tel"/></svg>Bel</a><a href="#info"><svg class="i"><use href="#klok"/></svg><span data-open-kort>Uren</span></a><a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" class="hoofd"><svg class="i"><use href="#route"/></svg>Route</a>
 </nav>
 
 <script>
@@ -551,6 +626,15 @@ try{ok=localStorage.getItem('kg-ck')==='1'}catch(e){}
 document.getElementById('ck-ok').onclick=function(){try{localStorage.setItem('kg-ck','1')}catch(e){}ck.classList.remove('toon');ckk.classList.add('toon')};
 ckk.onclick=function(){ckk.classList.remove('toon');ck.classList.add('toon')};
 </script>
-
+<script>(function(){
+var n=new Date(),d=n.getDay(),m=n.getMonth(),u=n.getHours()+n.getMinutes()/60;
+var zomer=m>=5&&m<=7,start=(d===0&&zomer)?10:12,open=u>=start;
+var lang=open?'Nu open':'Opent vandaag om '+start+'u',kort=open?'Nu open':'Open '+start+'u';
+document.querySelectorAll('[data-open]').forEach(function(e){e.classList.toggle('is-open',open);var t=e.querySelector('.ob-t');if(t)t.textContent=lang});
+document.querySelectorAll('[data-open-kort]').forEach(function(e){e.textContent=kort});
+var dag=['zo','ma','di','wo','do','vr','za'][d];
+document.querySelectorAll('.uren li[data-d="'+dag+'"]').forEach(function(li){li.classList.add('vandaag')});
+document.querySelectorAll('[data-vandaag]').forEach(function(e){e.textContent=['Zondag','Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag'][d]+': vanaf '+start+'u'});
+})();</script>
 </body>
 </html>
