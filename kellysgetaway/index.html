@@ -337,12 +337,24 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 .open-badge.is-open .dot{background:#4CC878;box-shadow:0 0 0 0 rgba(76,200,120,.6);animation:puls 2s infinite}
 @keyframes puls{0%{box-shadow:0 0 0 0 rgba(76,200,120,.55)}70%{box-shadow:0 0 0 9px rgba(76,200,120,0)}100%{box-shadow:0 0 0 0 rgba(76,200,120,0)}}
 .nav-route{display:inline-flex;gap:8px;align-items:center;padding:10px 18px}.nav-route svg.i{width:16px;height:16px}
-.ik-route{display:none}
-@media (max-width:1180px){.nav-r .nav-route{display:none}.ik-route{display:grid}.open-badge{padding:8px 10px;font-size:.8rem}}
-@media (max-width:520px){.open-badge .ob-t{display:none}.open-badge{width:44px;height:44px;justify-content:center;padding:0}}
+.ik-route{display:none}.ob-k{display:none}
+@media (max-width:1180px){.ik-route{display:none!important}.nav-r .open-badge{height:44px;padding:0 12px}}
+@media (max-width:760px){.nav-r .open-badge .ob-t{display:none}.nav-r .open-badge .ob-k{display:inline}}
+@media (max-width:1180px){.nav-r .nav-route{display:none}.open-badge{padding:8px 10px;font-size:.8rem}}
+
 .tb-open{display:inline-flex;gap:8px;align-items:center;font-weight:700}
 .tb-open .dot{width:9px;height:9px;border-radius:50%;background:var(--ink)}
 .tb-open.is-open .dot{background:#1F9D4C;box-shadow:0 0 0 0 rgba(31,157,76,.6);animation:puls 2s infinite}
+.huisregels{position:relative;margin-top:30px;background:#F3EBDD;color:#1a1512;padding:34px 34px 30px;border-radius:4px;transform:rotate(-1.5deg);box-shadow:0 30px 50px -22px rgba(0,0,0,.9);background-image:repeating-linear-gradient(#F3EBDD 0 33px,#d9cfbe 33px 34px);background-position:0 70px}
+.huisregels h3{font-family:var(--hand);color:#1a1512;font-size:1.7rem;font-weight:400}
+.huisregels ol{margin:14px 0 0 22px;display:grid;gap:4px}
+.huisregels li{font-family:var(--hand);font-size:1.12rem;line-height:1.5;color:#2a2018;padding-left:4px}
+.huisregels li::marker{color:var(--acc-d)}
+.huisregels .krabbel{position:absolute;right:26px;bottom:14px;font-size:1.6rem;color:var(--acc-d);transform:rotate(-8deg)}
+.pin-punaise{position:absolute;top:-10px;left:50%;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffb75a,#c9661f);box-shadow:0 4px 6px rgba(0,0,0,.5)}
+.f-extra{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;margin-top:36px;padding:24px 28px;border:2px dashed var(--rand);border-radius:4px}
+.f-extra .krabbel{font-size:1.6rem;transform:rotate(-4deg)}
+.f-extra .fx{display:flex;gap:10px;align-items:center;color:var(--tekst)}.f-extra .fx svg.i{color:var(--acc)}
 /* vandaag-kaart in hero */
 .kg-hero .wrap.hero-in{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:end}
 .vandaag-kaart{background:rgba(20,17,16,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--rand);border-radius:4px;padding:22px}
@@ -440,7 +452,7 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 @media (max-width:1180px){.sticker{width:130px;height:130px;right:4%;top:6%}}
 @media (max-width:760px){.sticker{display:none}.bord{padding:40px 22px 34px;border-width:10px}.bord ul{grid-template-columns:1fr}.kruis{height:160px}.band .rij{font-size:1.5rem}.band.b1{top:24px}.band.b2{top:86px}.kg-hero h1 .krabbel{position:static;display:inline-block;margin-left:8px}}
 @media (max-width:1360px){.tb>.tb-x{display:none}}
-@media (max-width:1180px){.nav{height:100px}.logo img{width:calc(100vw - 150px);max-width:340px;height:auto;max-height:none}.nav-r .open-badge{display:none}.topbar{display:block;font-size:.8rem}.kg-grid{grid-template-columns:1fr 1fr}.kg-info{grid-template-columns:1fr}}
+@media (max-width:1180px){.nav{height:100px}.logo img{width:calc(100vw - 190px);max-width:340px;height:auto;max-height:none}.topbar{display:block;font-size:.8rem}.kg-grid{grid-template-columns:1fr 1fr}.kg-info{grid-template-columns:1fr}}
 @media (max-width:1024px){.kg-muziek{grid-template-columns:1fr}.kg-hero{min-height:0}}
 @media (max-width:760px){.tb-x{display:none!important}}
 @media (max-width:640px){.kg-hero{padding:120px 0 48px;min-height:calc(100svh - 108px)}.kg-hero .knoppen .knop{flex:1 1 100%}.kg-grid{grid-template-columns:1fr}.kg-d.foto{min-height:320px}.kg-feiten div{padding:14px 18px 0 0;margin-right:18px}.kg-feiten b{font-size:1.8rem}.nav{height:88px}}
@@ -495,14 +507,14 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 </svg>
 
 <header id="header">
-  <div class="topbar"><div class="wrap tb"><a href="#info" class="tb-open" data-open><span class="dot"></span><span class="ob-t">Open vanaf 12u</span></a><a class="tb-x" href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener"><svg class="i"><use href="#pin"/></svg>Gestelstraat 34, Lummen</a><span class="tb-x"><svg class="i"><use href="#ster"/></svg>300+ bieren · 10 op tap</span><a href="tel:+32496123290"><svg class="i"><use href="#tel"/></svg>0496 123 290</a></div></div><div class="wrap nav">
+  <div class="topbar"><div class="wrap tb"><span><svg class="i"><use href="#klok"/></svg>Open 7/7 vanaf 12u</span><a class="tb-x" href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener"><svg class="i"><use href="#pin"/></svg>Gestelstraat 34, Lummen</a><span class="tb-x"><svg class="i"><use href="#ster"/></svg>300+ bieren · 10 op tap</span><a href="tel:+32496123290"><svg class="i"><use href="#tel"/></svg>0496 123 290</a></div></div><div class="wrap nav">
     <a href="#" class="logo"><img src="logo.svg" alt="Kelly’s Getaway" width="619" height="126"></a>
     <ul class="menu" id="menu">
       <li><a href="" class="actief">Home</a></li><li class="sub"><a href="#diensten">Aanbod <svg class="i"><use href="#pijler"/></svg></a><ul class="submenu"><li><a href="#d-bieren"><span class="s-ic"><svg class="i"><use href="#ster"/></svg></span>Bieren en dranken</a></li><li><a href="#d-muziek"><span class="s-ic"><svg class="i"><use href="#praat"/></svg></span>Live muziek en events</a></li><li><a href="#d-fietscafe"><span class="s-ic"><svg class="i"><use href="#pin"/></svg></span>Fietscafé en motozone</a></li><li><a href="#d-shop"><span class="s-ic"><svg class="i"><use href="#winkel"/></svg></span>Rockshop</a></li><li><a href="#d-moonshine"><span class="s-ic"><svg class="i"><use href="#glans"/></svg></span>Moonshine, mede en proeverijen</a></li><li><a href="#d-eten"><span class="s-ic"><svg class="i"><use href="#huis"/></svg></span>Vers, zelfgemaakt eten</a></li><li><a class="s-alle" href="#diensten">Alles bekijken <svg class="i"><use href="#pijl"/></svg></a></li></ul></li><li><a href="#muziek">Muziek</a></li><li><a href="#info">Openingsuren</a></li><li><a href="#faq">Veelgestelde vragen</a></li><li><a href="#offerte">Contact</a></li>
     </ul>
     <div class="nav-r">
       
-      <a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" class="knop k-acc nav-route"><svg class="i"><use href="#route"/></svg>Route</a><a class="ik ik-route" href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" aria-label="Route"><svg class="i"><use href="#route"/></svg></a>
+      <a href="#info" class="open-badge" data-open><span class="dot"></span><span class="ob-t">Open vanaf 12u</span><span class="ob-k" data-open-kort>Open</span></a><a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" class="knop k-acc nav-route"><svg class="i"><use href="#route"/></svg>Route</a><a class="ik ik-route" href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" aria-label="Route"><svg class="i"><use href="#route"/></svg></a>
       <button class="ik lijn" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -536,11 +548,9 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
     <div>
       <div class="kop"><span class="eyebrow">Over Kelly’s Getaway</span><h2>Geen doorsnee café</h2><span class="krabbel">Spring gerust binnen</span>
         <p class="lead">Hier komen rock en biker-cultuur samen met de warmte van een echt fietscafé. Wie houdt van sfeer, muziek en een goed glas, vindt hier zijn stek.</p></div>
-      <div class="af"><div class="af-tag"><svg class="i"><use href="#vraag"/></svg>Kort antwoord</div>
-        <h3>Wat is Kelly’s Getaway?</h3>
-        <p>Kelly’s Getaway is een rockcafé, biker bar en fietscafé aan de Gestelstraat 34 in Lummen. Je vindt er meer dan 300 bieren, moonshine en mede, live muziek, vers zelfgemaakt eten, een rockshop en een grote parking met motozone. Open 7 dagen op 7 vanaf 12 uur.</p>
-        <div class="feiten"><div><span>Open</span><b>7/7 vanaf 12u</b></div><div><span>Zomer</span><b>Zondag vanaf 10u</b></div><div><span>Adres</span><b>Gestelstraat 34, Lummen</b></div><div><span>Parking</span><b>Met aparte motozone</b></div></div>
-      </div>
+      <div class="huisregels"><span class="pin-punaise"></span><h3>De huisregels van Kelly</h3>
+        <ol><li>Motards en fietsers zijn altijd welkom, er is plaats genoeg.</li><li>Laat je verrassen door de bierkaart: meer dan 300 soorten.</li><li>Muziek luid, sfeer goed.</li><li>Honger? Vraag naar het verse, zelfgemaakte eten.</li><li>Met een groep? Even bellen naar 0496 123 290.</li></ol>
+        <span class="krabbel">Proost!</span></div>
     </div>
     <div class="who-foto"><img src="https://kellysgetaway.be/gallery/Kellys%20Getaway%20Lummen%2032.webp" alt="Bierfrigo met speciaalbieren in Kelly’s Getaway" loading="lazy"></div>
   </div>
@@ -680,11 +690,11 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
         
       </div></div>
     </div>
-    <div class="f-blok"><h4><svg class="i"><use href="#pin"/></svg>Vlakbij voor fietsers en motards uit</h4><div class="chips"><a href="#">Lummen</a><a href="#">Hasselt</a><a href="#">Herk-de-Stad</a><a href="#">Heusden-Zolder</a><a href="#">Halen</a><a href="#">Diest</a><a href="#">Beringen</a><a href="#">Tessenderlo</a><a href="#">Zonhoven</a><a href="#">Kermt</a></div></div>
+    <div class="f-extra"><span class="krabbel">Tot snel bij Kelly!</span><span class="fx"><svg class="i"><use href="#klok"/></svg>Elke dag open vanaf 12u · zomer: zondag vanaf 10u</span><a class="knop k-acc" href="https://www.facebook.com/profile.php?id=100057365173740" target="_blank" rel="noopener">Volg ons op Facebook</a></div>
     
     <div class="f-onder">
       <span>© 2026 Kelly’s Getaway · <a href="https://webstijl.be/">Website door WEBSTIJL</a></span>
-      <nav><a href="#">Sitemap</a><a href="#">Kennisbank</a><a href="#">Privacybeleid</a></nav>
+      <nav><a href="#">Sitemap</a><a href="#">Privacybeleid</a></nav>
     </div>
   </div>
 </footer>
