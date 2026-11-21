@@ -1,4 +1,4 @@
-/* WEBSTIJL demo-login. Klantwachtwoord telt elk bezoek; beheerderswachtwoord telt niet mee. */
+/* WEBSTIJL demo-login. Bij elke paginaopening opnieuw inloggen. Klantwachtwoord telt elk bezoek; beheerderswachtwoord telt niet mee. */
 (function(){
 var ENDPOINT='';
 var ADMIN='b6399048e8c4e07202f141a17b403aa50984aacf43a9985e7c41f2dbb918fa71';
@@ -7,7 +7,7 @@ var slug=(location.pathname.split('/').filter(Boolean)[0]||'').toLowerCase();
 var d=DEMOS[slug]; if(!d) return;
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){}}
 function ss(k,v){try{if(v===undefined)return sessionStorage.getItem(k);sessionStorage.setItem(k,v)}catch(e){}}
-if(ls('wst-admin')==='1'||ss('wst-ok-'+slug)==='1') return;
+try{localStorage.removeItem('wst-admin');Object.keys(sessionStorage).forEach(function(k){if(k.indexOf('wst-ok-')===0)sessionStorage.removeItem(k)})}catch(e){}
 var css=document.createElement('style');css.id='wst-hide';
 css.textContent='html.wst-lock body>*:not(#wst-gate){display:none!important}html.wst-lock,html.wst-lock body{overflow:hidden!important;background:#0f1012!important}'+
 '#wst-gate{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;padding:20px;background:radial-gradient(ellipse at 30% 0%,#2a2c31,#0f1012 70%);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}'+
@@ -33,8 +33,8 @@ function bouw(){
  setTimeout(function(){i.focus()},50);
  f.addEventListener('submit',function(e){e.preventDefault();var w=i.value.trim().toLowerCase();
   sha(w).then(function(x){
-   if(x===ADMIN){ls('wst-admin','1');open_();}
-   else if(x===d.h){ss('wst-ok-'+slug,'1');log();open_();}
+   if(x===ADMIN){open_();}
+   else if(x===d.h){log();open_();}
    else{fout.textContent='Dat wachtwoord klopt niet.';i.select();}
   });
  });
