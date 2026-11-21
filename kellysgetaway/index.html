@@ -257,9 +257,9 @@ p,.lead{color:var(--muted)}
 .k-acc{background:var(--acc);color:var(--ink)}.k-acc:hover{background:var(--acc-l);color:var(--ink)}
 .k-lijn,.k-lijn-w{border-color:var(--rand);color:var(--creme);background:transparent}.k-lijn:hover,.k-lijn-w:hover{border-color:var(--acc);background:var(--acc);color:var(--ink)}
 header{background:var(--ink);box-shadow:0 1px 0 var(--rand)}
-.logo{background:none;padding:0;flex-shrink:0}.nav{height:132px}.logo img{height:112px;width:auto;max-width:none;transform:rotate(-2deg);transition:transform .3s}.logo:hover img{transform:rotate(0) scale(1.04)}
-@media (min-width:1181px) and (max-width:1480px){.menu>li:nth-child(5){display:none}.menu>li>a{padding:8px 10px}}
-@media (min-width:1181px) and (max-width:1320px){.logo img{height:100px}.menu>li>a{font-size:1rem;padding:8px 8px}}
+.logo{background:none;padding:0;flex-shrink:0}.nav{height:150px}.logo img{height:117px;width:auto;max-width:none}
+@media (min-width:1181px) and (max-width:1480px){.menu>li:nth-child(4),.menu>li:nth-child(5){display:none}.menu>li>a{padding:8px 10px}}
+@media (min-width:1181px) and (max-width:1320px){.nav{height:124px}.logo img{height:90px}.menu>li>a{font-size:1rem;padding:8px 8px}}
 .menu>li>a{color:var(--creme);font-family:var(--fh);font-weight:400;font-size:1.12rem;letter-spacing:.06em;white-space:nowrap}
 .menu>li>a:hover,.menu>li>a.actief{color:var(--acc)}
 .submenu{background:var(--paneel)!important;border-color:var(--rand)!important}.submenu a{color:var(--tekst)!important}.submenu a:hover{background:rgba(255,255,255,.04)!important}
@@ -283,7 +283,7 @@ section{background:transparent}
 .af .feiten span{color:var(--muted)}.af .feiten b{color:var(--creme)}
 .af-tag{background:var(--acc);color:var(--ink)}
 /* hero */
-.kg-hero{position:relative;min-height:calc(100vh - 170px);min-height:calc(100svh - 170px);display:flex;align-items:flex-end;padding:120px 0 72px;background:#000 url('https://kellysgetaway.be/gallery_gen/28cc561d636497aa99ca25195b021a56_fit.webp') center 30%/cover no-repeat}
+.kg-hero{position:relative;min-height:calc(100vh - 188px);min-height:calc(100svh - 188px);display:flex;align-items:flex-end;padding:120px 0 72px;background:#000 url('https://kellysgetaway.be/gallery_gen/28cc561d636497aa99ca25195b021a56_fit.webp') center 30%/cover no-repeat}
 .kg-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,11,10,.45) 0%,rgba(13,11,10,.55) 40%,rgba(13,11,10,.96) 100%),linear-gradient(90deg,rgba(13,11,10,.7),transparent 70%)}
 .kg-hero>.wrap{position:relative;width:100%}
 .kg-hero h1{color:var(--creme);font-weight:400;font-size:clamp(3.2rem,8vw,7.2rem);line-height:.9;max-width:980px;margin-top:18px}
@@ -327,7 +327,7 @@ section{background:transparent}
 .who-foto img{border-radius:4px}
 .quote{background:var(--ink);border-top:1px solid var(--rand)}.quote .eyebrow{color:var(--acc)}
 footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:var(--acc)}
-.f-logo{background:none!important;padding:0!important}.f-logo img{height:110px;width:auto;transform:rotate(-2deg)}
+.f-logo{background:none!important;padding:0!important}.f-logo img{height:80px;width:auto}
 .chips a{background:var(--paneel);border-color:var(--rand);color:var(--tekst)}
 
 /* header-widgets horeca */
@@ -340,21 +340,24 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 .ik-route{display:none}
 @media (max-width:1180px){.nav-r .nav-route{display:none}.ik-route{display:grid}.open-badge{padding:8px 10px;font-size:.8rem}}
 @media (max-width:520px){.open-badge .ob-t{display:none}.open-badge{width:44px;height:44px;justify-content:center;padding:0}}
+.tb-open{display:inline-flex;gap:8px;align-items:center;font-weight:700}
+.tb-open .dot{width:9px;height:9px;border-radius:50%;background:var(--ink)}
+.tb-open.is-open .dot{background:#1F9D4C;box-shadow:0 0 0 0 rgba(31,157,76,.6);animation:puls 2s infinite}
 /* vandaag-kaart in hero */
 .kg-hero .wrap.hero-in{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:end}
-.vandaag{background:rgba(20,17,16,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--rand);border-radius:4px;padding:22px}
-.vandaag .open-badge{border:0;padding:0;font-size:1rem}
-.vandaag h3{margin-top:14px;font-size:1.6rem}
-.vandaag ul{list-style:none;margin-top:12px;display:grid;gap:8px}
-.vandaag li{display:flex;gap:10px;align-items:center;font-size:.9rem;color:#D3C8B6}
-.vandaag li svg.i{width:16px;height:16px;color:var(--acc);flex-shrink:0}
-.vandaag .knop{width:100%;justify-content:center;margin-top:16px}
+.vandaag-kaart{background:rgba(20,17,16,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--rand);border-radius:4px;padding:22px}
+.vandaag-kaart .open-badge{border:0;padding:0;font-size:1rem}
+.vandaag-kaart h3{margin-top:14px;font-size:1.6rem}
+.vandaag-kaart ul{list-style:none;margin-top:12px;display:grid;gap:8px}
+.vandaag-kaart li{display:flex;gap:10px;align-items:center;font-size:.9rem;color:#D3C8B6}
+.vandaag-kaart li svg.i{width:16px;height:16px;color:var(--acc);flex-shrink:0}
+.vandaag-kaart .knop{width:100%;justify-content:center;margin-top:16px}
 /* openingsuren + kaart */
 .kg-info2{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px;margin-top:40px}
 .uren{list-style:none;margin-top:14px}
 .uren li{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed var(--rand);color:var(--tekst)}
 .uren li:last-child{border:0}
-.uren li.vandaag{color:var(--acc);font-weight:700}
+.uren li.vandaag{color:var(--acc);font-weight:700;background:var(--acc-t);margin:0 -14px;padding:11px 14px;border-radius:4px;border-bottom-color:transparent}
 .uren li.vandaag span:first-child::after{content:"  · vandaag";font-weight:500;font-size:.8rem}
 .info-kol{display:grid;gap:16px;align-content:start}
 .info-kol .kaart h3{display:flex;gap:10px;align-items:center;font-size:1.6rem}
@@ -376,8 +379,8 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 .rv h2{font-size:clamp(1.8rem,3vw,2.4rem)}
 .rv p{margin-top:6px}
 .rv .knoppen{margin:0}
-@media (max-width:1024px){.kg-hero .wrap.hero-in{grid-template-columns:1fr}.vandaag{max-width:420px}.kg-info2{grid-template-columns:1fr}.rv{grid-template-columns:1fr;gap:18px}}
-@media (max-width:640px){.vandaag{display:none}.kaartblok{min-height:420px}.rv{padding:26px 20px}}
+@media (max-width:1024px){.kg-hero .wrap.hero-in{grid-template-columns:1fr}.vandaag-kaart{max-width:420px}.kg-info2{grid-template-columns:1fr}.rv{grid-template-columns:1fr;gap:18px}}
+@media (max-width:640px){.vandaag-kaart{display:none}.kaartblok{min-height:420px}.rv{padding:26px 20px}}
 
 /* ===== speelse horeca-laag ===== */
 .krabbel{font-family:var(--hand);color:var(--acc);font-weight:400;letter-spacing:0}
@@ -430,18 +433,18 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 /* zigzag randen */
 .zig{position:relative}
 .zig::before{content:"";position:absolute;left:0;right:0;top:-14px;height:15px;background:inherit;-webkit-mask:linear-gradient(-45deg,#000 10px,transparent 0) 0 0/20px 15px repeat-x,linear-gradient(45deg,#000 10px,transparent 0) 0 0/20px 15px repeat-x;mask:conic-gradient(from 135deg at top,#000 90deg,transparent 0) 50% 100%/20px 15px repeat-x}
-.vandaag{transform:rotate(1.5deg);border:2px solid var(--acc)}
-.vandaag::before{content:"Vandaag";position:absolute;top:-16px;left:18px;font-family:var(--hand);background:var(--acc);color:var(--ink);padding:2px 12px;border-radius:4px;transform:rotate(-4deg);font-size:1rem}
-.vandaag{position:relative}
+.vandaag-kaart{transform:rotate(1.5deg);border:2px solid var(--acc)}
+.vandaag-kaart::before{content:"Vandaag";position:absolute;top:-16px;left:18px;font-family:var(--hand);background:var(--acc);color:var(--ink);padding:2px 12px;border-radius:4px;transform:rotate(-4deg);font-size:1rem}
+.vandaag-kaart{position:relative}
 .rv{border:2px dashed var(--acc);transform:rotate(-.5deg)}
 @media (max-width:1180px){.sticker{width:130px;height:130px;right:4%;top:6%}}
 @media (max-width:760px){.sticker{display:none}.bord{padding:40px 22px 34px;border-width:10px}.bord ul{grid-template-columns:1fr}.kruis{height:160px}.band .rij{font-size:1.5rem}.band.b1{top:24px}.band.b2{top:86px}.kg-hero h1 .krabbel{position:static;display:inline-block;margin-left:8px}}
 @media (max-width:1360px){.tb>.tb-x{display:none}}
-@media (max-width:1180px){.nav{height:104px}.logo img{height:86px}.topbar{display:block;font-size:.8rem}.kg-grid{grid-template-columns:1fr 1fr}.kg-info{grid-template-columns:1fr}}
+@media (max-width:1180px){.nav{height:100px}.logo img{width:calc(100vw - 150px);max-width:340px;height:auto;max-height:none}.nav-r .open-badge{display:none}.topbar{display:block;font-size:.8rem}.kg-grid{grid-template-columns:1fr 1fr}.kg-info{grid-template-columns:1fr}}
 @media (max-width:1024px){.kg-muziek{grid-template-columns:1fr}.kg-hero{min-height:0}}
 @media (max-width:760px){.tb-x{display:none!important}}
-@media (max-width:640px){.kg-hero{padding:120px 0 48px;min-height:calc(100svh - 108px)}.kg-hero .knoppen .knop{flex:1 1 100%}.kg-grid{grid-template-columns:1fr}.kg-d.foto{min-height:320px}.kg-feiten div{padding:14px 18px 0 0;margin-right:18px}.kg-feiten b{font-size:1.8rem}.nav{height:86px}.logo img{height:68px}}
-@media (max-width:400px){.logo img{height:62px}}
+@media (max-width:640px){.kg-hero{padding:120px 0 48px;min-height:calc(100svh - 108px)}.kg-hero .knoppen .knop{flex:1 1 100%}.kg-grid{grid-template-columns:1fr}.kg-d.foto{min-height:320px}.kg-feiten div{padding:14px 18px 0 0;margin-right:18px}.kg-feiten b{font-size:1.8rem}.nav{height:88px}}
+
 
 </style>
 </head>
@@ -492,14 +495,14 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
 </svg>
 
 <header id="header">
-  <div class="topbar"><div class="wrap tb"><span><svg class="i"><use href="#klok"/></svg>Open 7/7 vanaf 12u</span><a class="tb-x" href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener"><svg class="i"><use href="#pin"/></svg>Gestelstraat 34, Lummen</a><span class="tb-x"><svg class="i"><use href="#ster"/></svg>300+ bieren · 10 op tap</span><a href="tel:+32496123290"><svg class="i"><use href="#tel"/></svg>0496 123 290</a></div></div><div class="wrap nav">
-    <a href="#" class="logo"><img src="logo-stack.svg" alt="Kelly’s Getaway" width="430" height="254"></a>
+  <div class="topbar"><div class="wrap tb"><a href="#info" class="tb-open" data-open><span class="dot"></span><span class="ob-t">Open vanaf 12u</span></a><a class="tb-x" href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener"><svg class="i"><use href="#pin"/></svg>Gestelstraat 34, Lummen</a><span class="tb-x"><svg class="i"><use href="#ster"/></svg>300+ bieren · 10 op tap</span><a href="tel:+32496123290"><svg class="i"><use href="#tel"/></svg>0496 123 290</a></div></div><div class="wrap nav">
+    <a href="#" class="logo"><img src="logo.svg" alt="Kelly’s Getaway" width="619" height="126"></a>
     <ul class="menu" id="menu">
       <li><a href="" class="actief">Home</a></li><li class="sub"><a href="#diensten">Aanbod <svg class="i"><use href="#pijler"/></svg></a><ul class="submenu"><li><a href="#d-bieren"><span class="s-ic"><svg class="i"><use href="#ster"/></svg></span>Bieren en dranken</a></li><li><a href="#d-muziek"><span class="s-ic"><svg class="i"><use href="#praat"/></svg></span>Live muziek en events</a></li><li><a href="#d-fietscafe"><span class="s-ic"><svg class="i"><use href="#pin"/></svg></span>Fietscafé en motozone</a></li><li><a href="#d-shop"><span class="s-ic"><svg class="i"><use href="#winkel"/></svg></span>Rockshop</a></li><li><a href="#d-moonshine"><span class="s-ic"><svg class="i"><use href="#glans"/></svg></span>Moonshine, mede en proeverijen</a></li><li><a href="#d-eten"><span class="s-ic"><svg class="i"><use href="#huis"/></svg></span>Vers, zelfgemaakt eten</a></li><li><a class="s-alle" href="#diensten">Alles bekijken <svg class="i"><use href="#pijl"/></svg></a></li></ul></li><li><a href="#muziek">Muziek</a></li><li><a href="#info">Openingsuren</a></li><li><a href="#faq">Veelgestelde vragen</a></li><li><a href="#offerte">Contact</a></li>
     </ul>
     <div class="nav-r">
       
-      <a href="#info" class="open-badge" data-open><span class="dot"></span><span class="ob-t">Open vanaf 12u</span></a><a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" class="knop k-acc nav-route"><svg class="i"><use href="#route"/></svg>Route</a><a class="ik ik-route" href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" aria-label="Route"><svg class="i"><use href="#route"/></svg></a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" class="knop k-acc nav-route"><svg class="i"><use href="#route"/></svg>Route</a><a class="ik ik-route" href="https://www.google.com/maps/search/?api=1&query=Kelly%27s+Getaway+Gestelstraat+34+3560+Lummen" target="_blank" rel="noopener" aria-label="Route"><svg class="i"><use href="#route"/></svg></a>
       <button class="ik lijn" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -518,7 +521,7 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
     </div>
     <div class="kg-feiten"><div><b>300+</b><span>bieren op fles</span></div><div><b>10</b><span>wisselend op tap</span></div><div><b>21</b><span>alcoholvrije bieren</span></div><div><b>7/7</b><span>open vanaf 12u</span></div></div>
    </div>
-   <aside class="vandaag">
+   <aside class="vandaag-kaart">
     <span class="open-badge" data-open><span class="dot"></span><span class="ob-t">Open vanaf 12u</span></span>
     <h3 data-vandaag>Vandaag: vanaf 12u</h3>
     <ul><li><svg class="i"><use href="#pin"/></svg>Gestelstraat 34, Lummen</li><li><svg class="i"><use href="#check"/></svg>Terras en grote motozone</li><li><svg class="i"><use href="#check"/></svg>Vers, zelfgemaakt eten</li></ul>
@@ -665,7 +668,7 @@ footer{background:var(--diep);border-top:1px solid var(--rand)}footer h4{color:v
   <div class="wrap">
     <div class="f-grid grid">
       <div>
-        <a href="#" class="f-logo"><img src="logo-stack.svg" alt="Kelly’s Getaway" loading="lazy"></a>
+        <a href="#" class="f-logo"><img src="logo.svg" alt="Kelly’s Getaway" loading="lazy"></a>
         <p>Rockcafé, biker bar en fietscafé in Lummen. Meer dan 300 bieren, live muziek, een rockshop en een grote motozone.</p>
         <div class="f-rij"><a href="https://www.facebook.com/profile.php?id=100057365173740" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a></div>
       </div>
